@@ -508,13 +508,13 @@
         lows = df_bars[<span class="hljs-string">&quot;low&quot;</span>]
 
         <span class="hljs-comment">#&#x8BFB;&#x53D6;days&#x5929;&#x4E4B;&#x524D;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x65E5;&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x636E;</span>
-        hh = highs[-days:<span class="hljs-number">-1</span>].max()
-        hc = closes[-days:<span class="hljs-number">-1</span>].max()
-        ll = lows[-days:<span class="hljs-number">-1</span>].min()
-        lc = closes[-days:<span class="hljs-number">-1</span>].min()
+        hh = highs[-days:-<span class="hljs-number">1</span>].max()
+        hc = closes[-days:-<span class="hljs-number">1</span>].max()
+        ll = lows[-days:-<span class="hljs-number">1</span>].min()
+        lc = closes[-days:-<span class="hljs-number">1</span>].min()
 
         <span class="hljs-comment">#&#x8BFB;&#x53D6;&#x4ECA;&#x5929;&#x7684;&#x5F00;&#x76D8;&#x4EF7;&#x3001;&#x6700;&#x9AD8;&#x4EF7;&#x548C;&#x6700;&#x4F4E;&#x4EF7;</span>
-        lastBar = df_bars.iloc[<span class="hljs-number">-1</span>]
+        lastBar = df_bars.iloc[-<span class="hljs-number">1</span>]
         openpx = lastBar[<span class="hljs-string">&quot;open&quot;</span>]
         highpx = lastBar[<span class="hljs-string">&quot;high&quot;</span>]
         lowpx = lastBar[<span class="hljs-string">&quot;low&quot;</span>]
@@ -654,7 +654,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"策略模块详解","level":"1.3.1","depth":2,"next":{"title":"接口文档","level":"1.3.2","depth":2,"path":"interfaces.md","ref":"interfaces.md","articles":[]},"previous":{"title":"Python API详解","level":"1.3","depth":1,"ref":"","articles":[{"title":"策略模块详解","level":"1.3.1","depth":2,"path":"structure.md","ref":"structure.md","articles":[]},{"title":"接口文档","level":"1.3.2","depth":2,"path":"interfaces.md","ref":"interfaces.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-组合盘管理的利器","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"Documents of WonderTrader"},"file":{"path":"structure.md","mtime":"2020-05-12T05:03:28.810Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-12T09:32:43.814Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"策略模块详解","level":"1.3.1","depth":2,"next":{"title":"接口文档","level":"1.3.2","depth":2,"path":"interfaces.md","ref":"interfaces.md","articles":[]},"previous":{"title":"Python API详解","level":"1.3","depth":1,"ref":"","articles":[{"title":"策略模块详解","level":"1.3.1","depth":2,"path":"structure.md","ref":"structure.md","articles":[]},{"title":"接口文档","level":"1.3.2","depth":2,"path":"interfaces.md","ref":"interfaces.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-组合盘管理的利器","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"Documents of WonderTrader"},"file":{"path":"structure.md","mtime":"2020-08-25T07:25:11.894Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-25T05:22:19.709Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -688,7 +688,7 @@
         
     
         
-        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
         
     
 
