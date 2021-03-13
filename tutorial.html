@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>快速入门 · WonderTrader-组合盘管理的利器</title>
+        <title>快速入门 · WonderTrader-一站式量化交易管理框架</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -44,7 +44,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="install.html" />
+    <link rel="next" href="devenv.html" />
     
     
 
@@ -130,12 +130,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="install.html">
+        <li class="chapter " data-level="1.2.2" data-path="devenv.html">
             
-                <a href="install.html">
+                <a href="devenv.html">
             
                     
-                    如何编译和安装
+                    开发环境搭建
             
                 </a>
             
@@ -169,7 +169,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="product.html">
+        <li class="chapter " data-level="1.2.5" data-path="optimizer.html">
+            
+                <a href="optimizer.html">
+            
+                    
+                    优化自己的策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="product.html">
             
                 <a href="product.html">
             
@@ -399,11 +412,11 @@
 </code></pre>
 </li>
 <li><p>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#x76F4;&#x63A5;&#x5B89;&#x88C5;</p>
-<pre><code class="lang-shell">  $ pip install wtpy
+<pre><code class="lang-shell">  $ pip install wtpy --upgrade
 </code></pre>
 <p>  &#x6216;&#x8005;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;whl&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x8FDB;&#x884C;&#x5B89;&#x88C5;
   &#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x5730;&#x5740;&#xFF1A;<a href="https://mirrors.aliyun.com/pypi/simple/wtpy/" target="_blank">https://mirrors.aliyun.com/pypi/simple/wtpy/</a>
-  pipy&#x5730;&#x5740;&#xFF1A;<a href="https://pypi.org/project/wtpy/#files" target="_blank">https://pypi.org/project/wtpy/#files</a></p>
+  pipy&#x5730;&#x5740;&#xFF1A;<a href="https://pypi.org/project/wtpy/" target="_blank">https://pypi.org/project/wtpy/</a></p>
 </li>
 <li><p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;wtpy&#x7684;&#x7248;&#x672C;&#x53F7;</p>
 <pre><code class="lang-shell">  $ pip show wtpy
@@ -415,12 +428,14 @@
 <ul>
 <li><p>github&#x4E0A;&#x63D0;&#x4F9B;&#x4E86;python&#x4E0B;&#x7684;&#x51E0;&#x4E2A;demo</p>
 <ul>
-<li>&#x671F;&#x8D27;&#x56DE;&#x6D4B; <a href="https://github.com/wondertrader/wondertrader/tree/master/demos/py/backtest_fut" target="_blank">backtest_fut</a></li>
-<li>&#x80A1;&#x7968;&#x56DE;&#x6D4B; <a href="https://github.com/wondertrader/wondertrader/tree/master/demos/py/backtest_stk" target="_blank">backtest_stk</a></li>
-<li>&#x671F;&#x8D27;&#x6570;&#x636E;&#x7EC4;&#x4EF6; <a href="https://github.com/wondertrader/wondertrader/tree/master/demos/py/datakit_fut" target="_blank">datakit_fut</a></li>
-<li>&#x80A1;&#x7968;&#x6570;&#x636E;&#x7EC4;&#x4EF6; <a href="https://github.com/wondertrader/wondertrader/tree/master/demos/py/datakit_stk" target="_blank">datakit_stk</a></li>
-<li>&#x671F;&#x8D27;&#x5B9E;&#x76D8; <a href="https://github.com/wondertrader/wondertrader/tree/master/demos/py/product_fut" target="_blank">product_fut</a></li>
-<li>&#x80A1;&#x7968;&#x5B9E;&#x76D8; <a href="https://github.com/wondertrader/wondertrader/tree/master/demos/py/product_stk" target="_blank">product_stk</a></li>
+<li>cta&#x671F;&#x8D27;&#x7B56;&#x7565;&#x5B9E;&#x76D8; <a href="https://github.com/wondertrader/wtpy/tree/master/demos/cta_fut" target="_blank">cta_fut</a></li>
+<li>cta&#x671F;&#x8D27;&#x7B56;&#x7565;&#x56DE;&#x6D4B; <a href="https://github.com/wondertrader/wtpy/tree/master/demos/cta_fut_bt" target="_blank">cta_fut_bt</a></li>
+<li>cta&#x80A1;&#x7968;&#x7B56;&#x7565;&#x5B9E;&#x76D8; <a href="https://github.com/wondertrader/wtpy/tree/master/demos/cta_stk" target="_blank">cta_stk</a></li>
+<li>cta&#x80A1;&#x7968;&#x7B56;&#x7565;&#x56DE;&#x6D4B; <a href="https://github.com/wondertrader/wtpy/tree/master/demos/cta_stk_bt" target="_blank">cta_stk_bt</a></li>
+<li>&#x671F;&#x8D27;&#x6570;&#x636E;&#x7EC4;&#x4EF6; <a href="https://github.com/wondertrader/wtpy/tree/master/demos/datakit_fut" target="_blank">datakit_fut</a></li>
+<li>&#x80A1;&#x7968;&#x6570;&#x636E;&#x7EC4;&#x4EF6; <a href="https://github.com/wondertrader/wtpy/tree/master/demos/datakit_stk" target="_blank">datakit_stk</a></li>
+<li>&#x671F;&#x8D27;&#x9AD8;&#x9891;&#x5B9E;&#x76D8; <a href="https://github.com/wondertrader/wtpy/tree/master/demos/hft_fut" target="_blank">hft_fut</a></li>
+<li>&#x671F;&#x8D27;sel&#x56DE;&#x6D4B; <a href="https://github.com/wondertrader/wtpy/tree/master/demos/sel_fut_bt" target="_blank">sel_fut_bt</a></li>
 </ul>
 </li>
 <li><p>&#x9009;&#x62E9;&#x9700;&#x8981;&#x7684;demo&#xFF0C;&#x5982;&#x671F;&#x8D27;&#x56DE;&#x6D4B;demo</p>
@@ -497,18 +512,18 @@
 </code></pre>
 </li>
 <li><p>&#x7136;&#x540E;&#x542F;&#x52A8;runBT.py&#x8FDB;&#x884C;&#x56DE;&#x6D4B;&#xFF0C;&#x56DE;&#x6D4B;&#x7684;&#x6267;&#x884C;&#x5982;&#x4E0B;
-  <img src="http://q92ex9g0c.bkt.clouddn.com/snapshots/bt_fut_snapshot.jpg" alt="alt &#x56DE;&#x6D4B;&#x793A;&#x4F8B;&#x56FE;"></p>
+  <img src="http://wt.f-sailors.cn/snapshots/bt_fut_snapshot.jpg" alt="alt &#x56DE;&#x6D4B;&#x793A;&#x4F8B;&#x56FE;"></p>
 </li>
 <li><p>&#x56DE;&#x6D4B;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x6253;&#x5F00;&#x751F;&#x6210;&#x7684;&#x7EE9;&#x6548;&#x5206;&#x6790;&#x62A5;&#x8868;(xxxx.xlsx)&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x7B56;&#x7565;&#x7684;&#x56DE;&#x6D4B;&#x7EE9;&#x6548;
   &#x56DE;&#x6D4B;&#x7EE9;&#x6548;&#x6982;&#x89C8;
-  <img src="http://q92ex9g0c.bkt.clouddn.com/snapshots/bt_fut_pnl_summary.png" alt="alt &#x56DE;&#x6D4B;&#x7EE9;&#x6548;&#x6982;&#x89C8;">
+  <img src="http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary.png" alt="alt &#x56DE;&#x6D4B;&#x7EE9;&#x6548;&#x6982;&#x89C8;">
   &#x56DE;&#x6D4B;&#x6536;&#x76CA;&#x8BE6;&#x60C5;
-  <img src="http://q92ex9g0c.bkt.clouddn.com/snapshots/ana_fut_snapshot.jpg" alt="alt &#x56DE;&#x6D4B;&#x7EE9;&#x6548;&#x8BE6;&#x60C5;">
+  <img src="http://wt.f-sailors.cn/snapshots/ana_fut_snapshot.jpg" alt="alt &#x56DE;&#x6D4B;&#x7EE9;&#x6548;&#x8BE6;&#x60C5;">
   &#x4ECE;&#x4E0A;&#x56FE;&#x7684;&#x7EE9;&#x6548;&#x5206;&#x6790;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;DualThrust&#x7B56;&#x7565;&#xFF0C;&#x9488;&#x5BF9;&#x80A1;&#x6307;&#x671F;&#x8D27;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#xFF0C;&#x5728;20190919&#x5230;20191201&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x8FD9;&#x7EC4;&#x53C2;&#x6570;&#x4E0B;&#x8FDB;&#x884C;&#x56DE;&#x6D4B;&#xFF0C;&#x4E00;&#x76F4;&#x5904;&#x4E8E;&#x56DE;&#x64A4;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x7D2F;&#x8BA1;&#x4E8F;&#x635F;&#x8FBE;20%&#x3002;&#x53EF;&#x89C1;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x4E00;&#x7EC4;&#x597D;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
 </li>
 <li><p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x8C03;&#x6574;&#x53C2;&#x6570;&#xFF0C;&#x5C06;K1&#x548C;K2&#x6539;&#x6210;0.5&#x548C;0.3&#xFF0C;&#x518D;&#x8FDB;&#x884C;&#x56DE;&#x6D4B;&#x548C;&#x5206;&#x6790;&#xFF0C;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x7ED3;&#x679C;
   &#x8C03;&#x6574;&#x540E;&#x7684;&#x56DE;&#x6D4B;&#x7EE9;&#x6548;&#x603B;&#x89C8;
-  <img src="http://q92ex9g0c.bkt.clouddn.com/snapshots/bt_fut_pnl_summary2.png" alt="alt &#x56DE;&#x6D4B;&#x7EE9;&#x6548;&#x6982;&#x89C8;">
+  <img src="http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary2.png" alt="alt &#x56DE;&#x6D4B;&#x7EE9;&#x6548;&#x6982;&#x89C8;">
   &#x4ECE;&#x4E0A;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x53C2;&#x6570;&#x8C03;&#x6574;&#x8FC7;&#x4EE5;&#x540E;&#x7684;&#x7EE9;&#x6548;&#x8FDC;&#x8FDC;&#x597D;&#x4E8E;&#x8C03;&#x6574;&#x4E4B;&#x524D;&#x3002;</p>
 </li>
 <li><p>&#x6700;&#x540E;&#x8FDB;&#x884C;&#x56DE;&#x6D4B;&#x5206;&#x6790;&#x603B;&#x7ED3;
@@ -530,7 +545,7 @@
             
                 
                 
-                <a href="install.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 如何编译和安装">
+                <a href="devenv.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 开发环境搭建">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -541,7 +556,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"快速入门","level":"1.2.1","depth":2,"next":{"title":"如何编译和安装","level":"1.2.2","depth":2,"path":"install.md","ref":"install.md","articles":[]},"previous":{"title":"基本用法","level":"1.2","depth":1,"ref":"","articles":[{"title":"快速入门","level":"1.2.1","depth":2,"path":"tutorial.md","ref":"tutorial.md","articles":[]},{"title":"如何编译和安装","level":"1.2.2","depth":2,"path":"install.md","ref":"install.md","articles":[]},{"title":"历史数据的处理","level":"1.2.3","depth":2,"path":"histdata.md","ref":"histdata.md","articles":[]},{"title":"回测自己的策略","level":"1.2.4","depth":2,"path":"mystrategy.md","ref":"mystrategy.md","articles":[]},{"title":"实盘完整攻略","level":"1.2.5","depth":2,"path":"product.md","ref":"product.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-组合盘管理的利器","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"Documents of WonderTrader"},"file":{"path":"tutorial.md","mtime":"2020-04-29T06:34:15.201Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-12T09:32:43.814Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"快速入门","level":"1.2.1","depth":2,"next":{"title":"开发环境搭建","level":"1.2.2","depth":2,"path":"devenv.md","ref":"devenv.md","articles":[]},"previous":{"title":"基本用法","level":"1.2","depth":1,"ref":"","articles":[{"title":"快速入门","level":"1.2.1","depth":2,"path":"tutorial.md","ref":"tutorial.md","articles":[]},{"title":"开发环境搭建","level":"1.2.2","depth":2,"path":"devenv.md","ref":"devenv.md","articles":[]},{"title":"历史数据的处理","level":"1.2.3","depth":2,"path":"histdata.md","ref":"histdata.md","articles":[]},{"title":"回测自己的策略","level":"1.2.4","depth":2,"path":"mystrategy.md","ref":"mystrategy.md","articles":[]},{"title":"优化自己的策略","level":"1.2.5","depth":2,"path":"optimizer.md","ref":"optimizer.md","articles":[]},{"title":"实盘完整攻略","level":"1.2.6","depth":2,"path":"product.md","ref":"product.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-一站式量化交易管理框架","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"WonderTrader官方文档"},"file":{"path":"tutorial.md","mtime":"2021-03-13T09:50:30.640Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-13T09:58:40.653Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

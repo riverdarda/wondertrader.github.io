@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>策略模块详解 · WonderTrader-组合盘管理的利器</title>
+        <title>策略模块详解 · WonderTrader-一站式量化交易管理框架</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -130,12 +130,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="install.html">
+        <li class="chapter " data-level="1.2.2" data-path="devenv.html">
             
-                <a href="install.html">
+                <a href="devenv.html">
             
                     
-                    如何编译和安装
+                    开发环境搭建
             
                 </a>
             
@@ -169,7 +169,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="product.html">
+        <li class="chapter " data-level="1.2.5" data-path="optimizer.html">
+            
+                <a href="optimizer.html">
+            
+                    
+                    优化自己的策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="product.html">
             
                 <a href="product.html">
             
@@ -396,7 +409,7 @@
 <p><code>WonderTrader</code>&#x7684;&#x7B56;&#x7565;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x4E00;&#x5171;&#x5C31;4&#x4E2A;&#x63A5;&#x53E3;&#x51FD;&#x6570;<code>on_init</code>&#x3001;<code>on_bar</code>&#x3001;<code>on_tick</code>&#x3001;<code>on_calculate</code>&#xFF0C;&#x6838;&#x5FC3;&#x903B;&#x8F91;&#x53EA;&#x9700;&#x8981;&#x5199;&#x5165;on_calculate&#x91CC;&#x5373;&#x53EF;&#x3002;</p>
 <pre><code class="lang-py"><span class="hljs-keyword">from</span> wtpy <span class="hljs-keyword">import</span> Context
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BaseStrategy</span>:</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BaseCtaStrategy</span>:</span>
     <span class="hljs-string">&apos;&apos;&apos;
     &#x7B56;&#x7565;&#x57FA;&#x7840;&#x7C7B;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x7B56;&#x7565;&#x90FD;&#x4ECE;&#x8BE5;&#x7C7B;&#x6D3E;&#x751F;\n
     &#x5305;&#x542B;&#x4E86;&#x7B56;&#x7565;&#x7684;&#x57FA;&#x672C;&#x5F00;&#x53D1;&#x6846;&#x67B6;
@@ -450,13 +463,13 @@
 <h3 id="&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x8BE6;&#x89E3;">&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x8BE6;&#x89E3;</h3>
 <hr>
 <p>&#x4E3A;&#x4E86;&#x8BE6;&#x7EC6;&#x7684;&#x4ECB;&#x7ECD;&#x5404;&#x4E2A;&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x4EE5;demo&#x4E2D;&#x7684;DualThrust&#x7B56;&#x7565;&#x4E3A;&#x4F8B;&#xFF0C;&#x6765;&#x53C2;&#x7167;&#x4ECB;&#x7ECD;</p>
-<pre><code class="lang-py"><span class="hljs-keyword">from</span> wtpy <span class="hljs-keyword">import</span> BaseStrategy
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> wtpy <span class="hljs-keyword">import</span> BaseCtaStrategy
 <span class="hljs-keyword">from</span> wtpy <span class="hljs-keyword">import</span> Context
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StraDualThrust</span><span class="hljs-params">(BaseStrategy)</span>:</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StraDualThrust</span><span class="hljs-params">(BaseCtaStrategy)</span>:</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name:str, code:str, barCnt:int, period:str, days:int, k1:float, k2:float, isForStk:bool = False)</span>:</span>
-        BaseStrategy.__init__(self, name)
+        BaseCtaStrategy.__init__(self, name)
 
         self.__days__ = days
         self.__k1__ = k1
@@ -654,7 +667,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"策略模块详解","level":"1.3.1","depth":2,"next":{"title":"接口文档","level":"1.3.2","depth":2,"path":"interfaces.md","ref":"interfaces.md","articles":[]},"previous":{"title":"Python API详解","level":"1.3","depth":1,"ref":"","articles":[{"title":"策略模块详解","level":"1.3.1","depth":2,"path":"structure.md","ref":"structure.md","articles":[]},{"title":"接口文档","level":"1.3.2","depth":2,"path":"interfaces.md","ref":"interfaces.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-组合盘管理的利器","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"Documents of WonderTrader"},"file":{"path":"structure.md","mtime":"2020-05-12T05:03:28.810Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-12T09:32:43.814Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"策略模块详解","level":"1.3.1","depth":2,"next":{"title":"接口文档","level":"1.3.2","depth":2,"path":"interfaces.md","ref":"interfaces.md","articles":[]},"previous":{"title":"Python API详解","level":"1.3","depth":1,"ref":"","articles":[{"title":"策略模块详解","level":"1.3.1","depth":2,"path":"structure.md","ref":"structure.md","articles":[]},{"title":"接口文档","level":"1.3.2","depth":2,"path":"interfaces.md","ref":"interfaces.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-一站式量化交易管理框架","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"WonderTrader官方文档"},"file":{"path":"structure.md","mtime":"2021-03-13T09:54:04.666Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-13T09:58:40.653Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

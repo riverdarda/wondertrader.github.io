@@ -1,0 +1,709 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>优化自己的策略 · WonderTrader-一站式量化交易管理框架</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="WonderTrader">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="product.html" />
+    
+    
+    <link rel="prev" href="mystrategy.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://wondertrader.github.io" target="_blank" class="custom-link">官网</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    WonderTrader简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    基本用法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="tutorial.html">
+            
+                <a href="tutorial.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="devenv.html">
+            
+                <a href="devenv.html">
+            
+                    
+                    开发环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="histdata.html">
+            
+                <a href="histdata.html">
+            
+                    
+                    历史数据的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="mystrategy.html">
+            
+                <a href="mystrategy.html">
+            
+                    
+                    回测自己的策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="optimizer.html">
+            
+                <a href="optimizer.html">
+            
+                    
+                    优化自己的策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="product.html">
+            
+                <a href="product.html">
+            
+                    
+                    实盘完整攻略
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Python API详解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    策略模块详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="interfaces.html">
+            
+                <a href="interfaces.html">
+            
+                    
+                    接口文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    使用进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="datakit.html">
+            
+                <a href="datakit.html">
+            
+                    
+                    数据组件简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="execunit.html">
+            
+                <a href="execunit.html">
+            
+                    
+                    编写自己的执行单元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="riskmon.html">
+            
+                <a href="riskmon.html">
+            
+                    
+                    编写自己的风控模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="moreexchg.html">
+            
+                <a href="moreexchg.html">
+            
+                    
+                    对接其他交易市场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="morelan.html">
+            
+                <a href="morelan.html">
+            
+                    
+                    对接其他语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="mailto:wondertrader@126.com">
+            
+                    
+                    wondertrader@126.com
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <a target="_blank" href="https://github.com/wondertrader/wondertrader/">
+            
+                    
+                    Github地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >优化自己的策略</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x53C2;&#x6570;&#x4F18;&#x5316;&#x5668;&#x7B80;&#x4ECB;">&#x53C2;&#x6570;&#x4F18;&#x5316;&#x5668;&#x7B80;&#x4ECB;</h3>
+<p>&#x4E4B;&#x524D;&#x9488;&#x5BF9;<strong>CTA&#x7B56;&#x7565;</strong>&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F18;&#x5316;&#x5668;<strong>WtCtaOptimizer</strong>&#xFF0C;&#x8BE5;&#x6A21;&#x5757;&#x4E3B;&#x8981;&#x901A;&#x8FC7;<strong>&#x904D;&#x5386;&#x53C2;&#x6570;</strong>&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5229;&#x7528;<strong>multiprocessing</strong>&#x6A21;&#x5757;<strong>&#x5E76;&#x53D1;&#x542F;&#x52A8;&#x591A;&#x4E2A;&#x8FDB;&#x7A0B;</strong>&#x8FDB;&#x884C;<strong>&#x5386;&#x53F2;&#x56DE;&#x6D4B;</strong>&#xFF0C;&#x7136;&#x540E;&#x6C47;&#x603B;&#x56DE;&#x6D4B;&#x7ED3;&#x679C;&#x751F;&#x6210;&#x56DE;&#x6D4B;&#x62A5;&#x8868;&#x3002;
+&#x53C2;&#x6570;&#x4F18;&#x5316;&#x5668;&#x4E3B;&#x8981;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li><strong>&#x56FA;&#x5B9A;&#x53C2;&#x6570;</strong>&#xFF0C;&#x5373;&#x904D;&#x5386;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x66F4;&#x6539;&#x7684;&#x53C2;&#x6570;<pre><code class="lang-py">optimizer.add_fixed_param(name=<span class="hljs-string">&quot;barCnt&quot;</span>, val=<span class="hljs-number">50</span>)
+</code></pre>
+</li>
+<li><strong>&#x6570;&#x503C;&#x7C7B;&#x53EF;&#x53D8;&#x53C2;&#x6570;</strong>&#xFF0C;&#x5373;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x6B65;&#x957F;&#x548C;&#x6570;&#x503C;&#x8303;&#x56F4;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x904D;&#x5386;&#xFF0C;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;<pre><code class="lang-py">optimizer.add_mutable_param(name=<span class="hljs-string">&quot;k1&quot;</span>, start_val=<span class="hljs-number">0.1</span>, end_val=<span class="hljs-number">1.0</span>, step_val=<span class="hljs-number">0.1</span>, ndigits = <span class="hljs-number">1</span>)
+</code></pre>
+</li>
+<li><strong>&#x5217;&#x8868;&#x7C7B;&#x53EF;&#x53D8;&#x53C2;&#x6570;</strong>&#xFF0C;&#x5373;&#x7ED9;&#x5B9A;&#x9884;&#x8BBE;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x9009;&#x62E9;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x904D;&#x5386;&#x6807;&#x7684;&#x3001;&#x5468;&#x671F;&#x7B49;&#x53C2;&#x6570;<pre><code class="lang-py">optimizer.add_listed_param(name=<span class="hljs-string">&quot;code&quot;</span>, val_list=[<span class="hljs-string">&quot;CFFEX.IF.HOT&quot;</span>,<span class="hljs-string">&quot;CFFEX.IC.HOT&quot;</span>])
+</code></pre>
+</li>
+</ul>
+<p><strong>&#x672C;&#x6587;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x6F14;&#x793A;<code>WtCtaOptimizer</code>&#x7684;&#x7528;&#x6CD5;</strong>&#x3002;</p>
+<h3 id="dualthrust&#x4ECB;&#x7ECD;">DualThrust&#x4ECB;&#x7ECD;</h3>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x796D;&#x51FA;<strong>WonderTrader</strong>&#x60EF;&#x7528;&#x7684;<code>DualThrust</code>&#x7B56;&#x7565;&#x3002;</p>
+<p><code>DualThrust</code>&#x7B56;&#x7565;&#x662F;&#x4E00;&#x4E2A;&#x7A81;&#x7834;&#x7B56;&#x7565;&#xFF0C;&#x5229;&#x7528;&#x524D;N&#x65E5;&#x7684;&#x5F00;&#x9AD8;&#x4F4E;&#x6536;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;<code>Range</code>&#xFF0C;&#x7136;&#x540E;&#x5229;&#x7528;&#x5F53;&#x524D;K&#x7EBF;&#x7684;&#x5F00;&#x76D8;&#x4EF7;&#x52A0;&#x4E0A;<code>Range</code>&#x4E58;&#x4EE5;&#x4E00;&#x4E2A;&#x7CFB;&#x6570;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x4E0A;&#x8F68;&#xFF0C;&#x51CF;&#x53BB;<code>Range</code>&#x4E58;&#x4EE5;&#x4E00;&#x4E2A;&#x7CFB;&#x6570;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x4E0B;&#x8F68;&#xFF0C;&#x5F53;&#x6700;&#x65B0;&#x4EF7;&#x7A81;&#x7834;&#x4E0A;&#x8F68;&#x65F6;&#x505A;&#x591A;&#xFF0C;&#x7A81;&#x7834;&#x4E0B;&#x8F68;&#x65F6;&#x505A;&#x7A7A;&#x3002;
+<img src="https://segmentfault.com/img/bVcOC7j" alt="DualThrust&#x793A;&#x610F;&#x56FE;(&#x6E90;&#x81EA;&#x7F51;&#x7EDC;&#xFF0C;&#x4FB5;&#x5220;)">
+<code>DualThrust</code>&#x539F;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x4E0A;&#x4E0B;&#x8F68;&#x662F;&#x5BF9;&#x79F0;&#x7684;&#xFF0C;&#x6587;&#x672C;&#x6240;&#x7528;&#x7684;<code>DualThrust</code>&#x7B56;&#x7565;&#x5728;&#x5B9E;&#x73B0;&#x65F6;&#x628A;&#x4E0A;&#x4E0B;&#x8F68;&#x7684;&#x7CFB;&#x6570;&#x4F5C;&#x4E3A;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x7B56;&#x7565;&#x6838;&#x5FC3;&#x903B;&#x8F91;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_calculate</span><span class="hljs-params">(self, context:CtaContext)</span>:</span>
+    code = self.__code__    <span class="hljs-comment">#&#x54C1;&#x79CD;&#x4EE3;&#x7801;</span>
+
+    trdUnit = <span class="hljs-number">1</span>
+
+    <span class="hljs-comment">#&#x8BFB;&#x53D6;&#x6700;&#x8FD1;50&#x6761;1&#x5206;&#x949F;&#x7EBF;(dataframe&#x5BF9;&#x8C61;)</span>
+    theCode = code
+    df_bars = context.stra_get_bars(theCode, self.__period__, self.__bar_cnt__, isMain = <span class="hljs-keyword">True</span>)
+
+    <span class="hljs-comment">#&#x628A;&#x7B56;&#x7565;&#x53C2;&#x6570;&#x8BFB;&#x8FDB;&#x6765;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#xFF0C;&#x65B9;&#x4FBF;&#x5F15;&#x7528;</span>
+    days = self.__days__
+    k1 = self.__k1__
+    k2 = self.__k2__
+
+    <span class="hljs-comment">#&#x5E73;&#x4ED3;&#x4EF7;&#x5E8F;&#x5217;&#x3001;&#x6700;&#x9AD8;&#x4EF7;&#x5E8F;&#x5217;&#x3001;&#x6700;&#x4F4E;&#x4EF7;&#x5E8F;&#x5217;</span>
+    closes = df_bars.closes
+    highs = df_bars.highs
+    lows = df_bars.lows
+
+    <span class="hljs-comment">#&#x8BFB;&#x53D6;days&#x5929;&#x4E4B;&#x524D;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x4EA4;&#x6613;&#x65E5;&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x636E;</span>
+    hh = np.amax(highs[-days:<span class="hljs-number">-1</span>])
+    hc = np.amax(closes[-days:<span class="hljs-number">-1</span>])
+    ll = np.amin(lows[-days:<span class="hljs-number">-1</span>])
+    lc = np.amin(closes[-days:<span class="hljs-number">-1</span>])
+
+    <span class="hljs-comment">#&#x8BFB;&#x53D6;&#x4ECA;&#x5929;&#x7684;&#x5F00;&#x76D8;&#x4EF7;&#x3001;&#x6700;&#x9AD8;&#x4EF7;&#x548C;&#x6700;&#x4F4E;&#x4EF7;</span>
+    <span class="hljs-comment"># lastBar = df_bars.get_last_bar()</span>
+    openpx = df_bars.opens[<span class="hljs-number">-1</span>]
+    highpx = df_bars.highs[<span class="hljs-number">-1</span>]
+    lowpx = df_bars.lows[<span class="hljs-number">-1</span>]
+
+    <span class="hljs-string">&apos;&apos;&apos;
+    !!!!!&#x8FD9;&#x91CC;&#x662F;&#x91CD;&#x70B9;
+    1&#x3001;&#x9996;&#x5148;&#x6839;&#x636E;&#x6700;&#x540E;&#x4E00;&#x6761;K&#x7EBF;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8BA1;&#x7B97;&#x5F53;&#x524D;&#x7684;&#x65E5;&#x671F;
+    2&#x3001;&#x6839;&#x636E;&#x5F53;&#x524D;&#x7684;&#x65E5;&#x671F;&#xFF0C;&#x5BF9;&#x65E5;&#x7EBF;&#x8FDB;&#x884C;&#x5207;&#x7247;,&#x5E76;&#x622A;&#x53D6;&#x6240;&#x9700;&#x6761;&#x6570;
+    3&#x3001;&#x6700;&#x540E;&#x5728;&#x6700;&#x7EC8;&#x5207;&#x7247;&#x5185;&#x8BA1;&#x7B97;&#x6240;&#x9700;&#x6570;&#x636E;
+    &apos;&apos;&apos;</span>
+
+    <span class="hljs-comment">#&#x786E;&#x5B9A;&#x4E0A;&#x8F68;&#x548C;&#x4E0B;&#x8F68;</span>
+    upper_bound = openpx + k1* max(hh-lc,hc-ll)
+    lower_bound = openpx - k2* max(hh-lc,hc-ll)
+
+    <span class="hljs-comment">#&#x8BFB;&#x53D6;&#x5F53;&#x524D;&#x4ED3;&#x4F4D;</span>
+    curPos = context.stra_get_position(code)/trdUnit
+
+    <span class="hljs-keyword">if</span> curPos == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">if</span> highpx &gt;= upper_bound:
+            context.stra_enter_long(code, <span class="hljs-number">1</span>*trdUnit, <span class="hljs-string">&apos;enterlong&apos;</span>)
+            context.stra_log_text(<span class="hljs-string">&quot;&#x5411;&#x4E0A;&#x7A81;&#x7834;%.2f&gt;=%.2f&#xFF0C;&#x591A;&#x4ED3;&#x8FDB;&#x573A;&quot;</span> % (highpx, upper_bound))
+            <span class="hljs-keyword">return</span>
+
+        <span class="hljs-keyword">if</span> lowpx &lt;= lower_bound <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> self.__is_stk__:
+            context.stra_enter_short(code, <span class="hljs-number">1</span>*trdUnit, <span class="hljs-string">&apos;entershort&apos;</span>)
+            context.stra_log_text(<span class="hljs-string">&quot;&#x5411;&#x4E0B;&#x7A81;&#x7834;%.2f&lt;=%.2f&#xFF0C;&#x7A7A;&#x4ED3;&#x8FDB;&#x573A;&quot;</span> % (lowpx, lower_bound))
+            <span class="hljs-keyword">return</span>
+    <span class="hljs-keyword">elif</span> curPos &gt; <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">if</span> lowpx &lt;= lower_bound:
+            context.stra_exit_long(code, <span class="hljs-number">1</span>*trdUnit, <span class="hljs-string">&apos;exitlong&apos;</span>)
+            context.stra_log_text(<span class="hljs-string">&quot;&#x5411;&#x4E0B;&#x7A81;&#x7834;%.2f&lt;=%.2f&#xFF0C;&#x591A;&#x4ED3;&#x51FA;&#x573A;&quot;</span> % (lowpx, lower_bound))
+            <span class="hljs-keyword">return</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">if</span> highpx &gt;= upper_bound <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> self.__is_stk__:
+            context.stra_exit_short(code, <span class="hljs-number">1</span>*trdUnit, <span class="hljs-string">&apos;exitshort&apos;</span>)
+            context.stra_log_text(<span class="hljs-string">&quot;&#x5411;&#x4E0A;&#x7A81;&#x7834;%.2f&gt;=%.2f&#xFF0C;&#x7A7A;&#x4ED3;&#x51FA;&#x573A;&quot;</span> % (highpx, upper_bound))
+            <span class="hljs-keyword">return</span>
+</code></pre>
+<h3 id="&#x521D;&#x6B65;&#x56DE;&#x6D4B;">&#x521D;&#x6B65;&#x56DE;&#x6D4B;</h3>
+<p>&#x7B56;&#x7565;&#x51C6;&#x5907;&#x597D;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x9488;&#x5BF9;<code>DualThrust</code>&#x4E0D;&#x52A0;&#x6B62;&#x76C8;&#x6B62;&#x635F;&#x7684;&#x7EE9;&#x6548;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x6700;&#x4F18;&#x53C2;&#x6570;&#x9009;&#x62E9;&#x3002;&#x53C2;&#x6570;&#x4F18;&#x5316;&#x5668;&#x7684;&#x8C03;&#x7528;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> wtpy.apps <span class="hljs-keyword">import</span> WtCtaOptimizer
+
+<span class="hljs-keyword">from</span> Strategies.DualThrust <span class="hljs-keyword">import</span> StraDualThrust
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    <span class="hljs-comment"># &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6570;&#x4E3A;8</span>
+    optimizer = WtCtaOptimizer(worker_num=<span class="hljs-number">4</span>)
+
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165;&#x7B56;&#x7565;&#x7C7B;&#x578B;&#x5373;&#x53EF;&#xFF0C;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x7B56;&#x7565;ID&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x7528;&#x4E8E;&#x533A;&#x5206;&#x6BCF;&#x4E2A;&#x7B56;&#x7565;&#x7684;&#x5B9E;&#x4F8B;</span>
+    optimizer.set_strategy(StraDualThrust, <span class="hljs-string">&quot;Dt_IF_&quot;</span>)
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x56FA;&#x5B9A;&#x53C2;&#x6570;</span>
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;barCnt&quot;</span>, val=<span class="hljs-number">50</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;period&quot;</span>, val=<span class="hljs-string">&quot;m5&quot;</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;days&quot;</span>, val=<span class="hljs-number">30</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;code&quot;</span>, val=<span class="hljs-string">&quot;CFFEX.IF.HOT&quot;</span>)
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x9884;&#x8BBE;&#x8303;&#x56F4;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5373;&#x53C2;&#x6570;&#x53EA;&#x80FD;&#x5728;&#x9884;&#x8BBE;&#x5217;&#x8868;&#x4E2D;&#x9009;&#x62E9;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x6807;&#x7684;&#x4EE3;&#x7801;&#x3001;&#x5468;&#x671F;&#x7B49;&#x53C2;&#x6570;</span>
+    <span class="hljs-comment"># optimizer.add_listed_param(name=&quot;code&quot;, val_list=[&quot;CFFEX.IF.HOT&quot;,&quot;CFFEX.IC.HOT&quot;])</span>
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x4E00;&#x822C;&#x6570;&#x503C;&#x7C7B;&#x53C2;&#x6570;</span>
+    optimizer.add_mutable_param(name=<span class="hljs-string">&quot;k1&quot;</span>, start_val=<span class="hljs-number">0.1</span>, end_val=<span class="hljs-number">1.0</span>, step_val=<span class="hljs-number">0.1</span>, ndigits = <span class="hljs-number">1</span>)
+    optimizer.add_mutable_param(name=<span class="hljs-string">&quot;k2&quot;</span>, start_val=<span class="hljs-number">0.1</span>, end_val=<span class="hljs-number">1.0</span>, step_val=<span class="hljs-number">0.1</span>, ndigits = <span class="hljs-number">1</span>)
+
+    <span class="hljs-comment"># &#x914D;&#x7F6E;&#x56DE;&#x6D4B;&#x73AF;&#x5883;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5C06;&#x76F4;&#x63A5;&#x56DE;&#x6D4B;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x52A8;&#x6001;&#x4F20;&#x9012;&#xFF0C;&#x4F18;&#x5316;&#x5668;&#x4E2D;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x52A8;&#x6001;&#x6784;&#x9020;&#x56DE;&#x6D4B;&#x5F15;&#x64CE;</span>
+    optimizer.config_backtest_env(deps_dir=<span class="hljs-string">&apos;./common/&apos;</span>, cfgfile=<span class="hljs-string">&apos;configbt.json&apos;</span>, storage_type=<span class="hljs-string">&quot;csv&quot;</span>, storage_path=<span class="hljs-string">&quot;./storage/&quot;</span>)
+    optimizer.config_backtest_time(start_time=<span class="hljs-number">201909100930</span>, end_time=<span class="hljs-number">202010121500</span>)
+
+    <span class="hljs-comment"># &#x542F;&#x52A8;&#x4F18;&#x5316;&#x5668;</span>
+    optimizer.go(interval=<span class="hljs-number">0.2</span>, out_marker_file=<span class="hljs-string">&quot;strategies.json&quot;</span>)
+
+    kw = input(<span class="hljs-string">&apos;press any key to exit\n&apos;</span>)
+</code></pre>
+<p>&#x672C;&#x4F8B;&#x4E2D;&#x8BBE;&#x7F6E;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x7684;&#x4E2A;&#x6570;&#x4E3A;4&#x4E2A;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E00;&#x822C;&#x63A8;&#x8350;&#x8BBE;&#x7F6E;&#x7684;&#x4E2A;&#x6570;&#x548C;<code>CPU</code>&#x5185;&#x6838;&#x6570;&#x5339;&#x914D;&#x3002;
+&#x4F18;&#x5316;&#x5668;&#x5165;&#x53E3;&#x914D;&#x7F6E;&#x597D;&#x4E86;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x56DE;&#x6D4B;&#x4E86;&#x3002;
+<strong>&#x4F18;&#x5316;&#x5668;&#x6267;&#x884C;&#x754C;&#x9762;</strong>
+<img src="https://segmentfault.com/img/bVcOCZN" alt="">
+<strong>&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x5360;&#x7528;&#x60C5;&#x51B5;</strong>
+<img src="https://segmentfault.com/img/bVcOCZP" alt="">
+&#x4F18;&#x5316;&#x5668;&#x6279;&#x91CF;&#x56DE;&#x6D4B;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x6C47;&#x603B;&#x62A5;&#x8868;
+<img src="https://segmentfault.com/img/bVcOC0L" alt="&#x56DE;&#x6D4B;&#x7ED3;&#x679C;&#x5206;&#x6790;">
+&#x6211;&#x4EEC;&#x5148;&#x6309;&#x7167;<strong>&#x6536;&#x76CA;&#x98CE;&#x9669;&#x6BD4;&#x5927;&#x4E8E;3</strong>&#xFF0C;&#x8FDB;&#x884C;&#x521D;&#x6B65;&#x7B5B;&#x9009;&#x3002;
+<img src="https://segmentfault.com/img/bVcOC0N" alt="&#x76C8;&#x4E8F;&#x6BD4;&#x5927;&#x4E8E;3&#x7684;&#x53C2;&#x6570;&#x7EC4;&#x5408;">
+&#x6700;&#x7EC8;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x4EA4;&#x6613;&#x6B21;&#x6570;&#x6700;&#x591A;&#x7684;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5BF9;&#xFF0C;&#x5373;k1&#x548C;k2&#x90FD;&#x7B49;&#x4E8E;0.4&#x8FD9;&#x7EC4;&#xFF0C;&#x4F5C;&#x4E3A;&#x6211;&#x4EEC;&#x6700;&#x57FA;&#x7840;&#x7684;&#x7B56;&#x7565;&#x53C2;&#x6570;&#x3002;&#x5148;&#x5229;&#x7528;<strong>WtBtAnalyst</strong>&#x505A;&#x4E00;&#x4E0B;&#x7EE9;&#x6548;&#x5206;&#x6790;&#xFF0C;2019&#x5E74;&#x80A1;&#x6307;&#x671F;&#x8D27;&#x5927;&#x6982;&#x5728;4000&#x70B9;&#x5DE6;&#x53F3;&#xFF0C;&#x5408;&#x7EA6;&#x4EF7;&#x503C;&#x5927;&#x6982;120&#x4E07;&#xFF0C;&#x6309;&#x7167;&#x4E00;&#x500D;&#x6760;&#x6746;&#xFF0C;&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x8D44;&#x91D1;&#x4E3A;120&#x4E07;&#x3002;
+<img src="https://segmentfault.com/img/bVcOC1W" alt="k1=0.4/k2=0.4&#x56DE;&#x6D4B;&#x7EE9;&#x6548;">
+&#x4ECE;&#x7EE9;&#x6548;&#x6765;&#x770B;&#xFF0C;&#x8FD9;&#x7EC4;&#x53C2;&#x6570;&#x8FD8;&#x662F;&#x5F88;&#x6709;&#x6F5C;&#x529B;&#x7684;&#x3002;<strong>&#x81F3;&#x4E8E;&#x672C;&#x4F8B;&#x662F;&#x5426;&#x6D89;&#x53CA;&#x5230;&#x8FC7;&#x62DF;&#x5408;&#x3001;&#x662F;&#x5426;&#x8981;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6837;&#x672C;&#x5916;&#x6570;&#x636E;&#x7684;&#x56DE;&#x6D4B;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x672C;&#x6587;&#x63A2;&#x8BA8;&#x7684;&#x8303;&#x7574;</strong>&#x3002;&#x4ECE;&#x7EE9;&#x6548;&#x5206;&#x6790;&#x4E0A;&#x6765;&#x770B;&#xFF0C;<strong>&#x5E74;&#x5316;&#x6536;&#x76CA;&#x7387;</strong>&#x8FBE;&#x5230;&#x4E86;<strong>52.6%</strong>&#xFF0C;&#x4F46;&#x662F;&#x6700;&#x5927;&#x56DE;&#x64A4;&#x53EA;&#x6709;<strong>5.36%</strong>&#x3002;</p>
+<h3 id="&#x52A0;&#x5165;&#x6B62;&#x635F;">&#x52A0;&#x5165;&#x6B62;&#x635F;</h3>
+<p>&#x57FA;&#x672C;&#x53C2;&#x6570;&#x7EC4;&#x5408;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#x4E86;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x8981;&#x52A0;&#x5165;&#x6B62;&#x635F;&#x903B;&#x8F91;&#x3002;&#x4E3A;&#x4E86;&#x7B80;&#x5316;&#x903B;&#x8F91;&#xFF0C;&#x6211;&#x4EEC;&#x91C7;&#x7528;<strong>&#x56FA;&#x5B9A;&#x4EF7;&#x5DEE;&#x6B62;&#x635F;</strong>&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7B56;&#x7565;&#x8FDB;&#x51FA;&#x573A;&#x903B;&#x8F91;&#x4E4B;&#x524D;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#x3002;&#x6B62;&#x635F;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x91C7;&#x7528;&#x6700;&#x65B0;&#x4EF7;&#x548C;&#x8FDB;&#x573A;&#x4EF7;&#x7684;&#x4EF7;&#x5DEE;&#xFF0C;&#x5F53;&#x4EF7;&#x5DEE;&#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x70B9;&#x4F4D;&#xFF0C;&#x5219;&#x8FDB;&#x884C;&#x6B62;&#x635F;&#x3002;
+&#x6211;&#x4EEC;&#x5C06;&#x6B62;&#x635F;&#x70B9;&#x4F4D;&#x533A;&#x95F4;&#x8BBE;&#x7F6E;&#x4E3A;0&#x5230;10&#xFF0C;&#x6BCF;&#x6B21;0.2&#x4E00;&#x8DF3;&#x3002;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">runStopLossOptimizer</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6570;&#x4E3A;8</span>
+    optimizer = WtCtaOptimizer(worker_num=<span class="hljs-number">4</span>)
+
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165;&#x7B56;&#x7565;&#x7C7B;&#x578B;&#x5373;&#x53EF;&#xFF0C;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x7B56;&#x7565;ID&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x7528;&#x4E8E;&#x533A;&#x5206;&#x6BCF;&#x4E2A;&#x7B56;&#x7565;&#x7684;&#x5B9E;&#x4F8B;</span>
+    optimizer.set_strategy(StraDualThrust, <span class="hljs-string">&quot;Dt_IF_SL_&quot;</span>)
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x56FA;&#x5B9A;&#x53C2;&#x6570;</span>
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;barCnt&quot;</span>, val=<span class="hljs-number">50</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;period&quot;</span>, val=<span class="hljs-string">&quot;m5&quot;</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;days&quot;</span>, val=<span class="hljs-number">30</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;code&quot;</span>, val=<span class="hljs-string">&quot;CFFEX.IF.HOT&quot;</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;k1&quot;</span>, val=<span class="hljs-number">0.4</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;k2&quot;</span>, val=<span class="hljs-number">0.4</span>)
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x4E00;&#x822C;&#x6570;&#x503C;&#x7C7B;&#x53C2;&#x6570;</span>
+    optimizer.add_mutable_param(name=<span class="hljs-string">&quot;slTicks&quot;</span>, start_val=<span class="hljs-number">0</span>, end_val=<span class="hljs-number">10</span>, step_val=<span class="hljs-number">0.2</span>, ndigits = <span class="hljs-number">1</span>)
+
+    <span class="hljs-comment"># &#x914D;&#x7F6E;&#x56DE;&#x6D4B;&#x73AF;&#x5883;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5C06;&#x76F4;&#x63A5;&#x56DE;&#x6D4B;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x52A8;&#x6001;&#x4F20;&#x9012;&#xFF0C;&#x4F18;&#x5316;&#x5668;&#x4E2D;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x52A8;&#x6001;&#x6784;&#x9020;&#x56DE;&#x6D4B;&#x5F15;&#x64CE;</span>
+    optimizer.config_backtest_env(deps_dir=<span class="hljs-string">&apos;./common/&apos;</span>, cfgfile=<span class="hljs-string">&apos;configbt.json&apos;</span>, storage_type=<span class="hljs-string">&quot;csv&quot;</span>, storage_path=<span class="hljs-string">&quot;./storage/&quot;</span>)
+    optimizer.config_backtest_time(start_time=<span class="hljs-number">201909100930</span>, end_time=<span class="hljs-number">202010121500</span>)
+
+    <span class="hljs-comment"># &#x542F;&#x52A8;&#x4F18;&#x5316;&#x5668;</span>
+    optimizer.go(interval=<span class="hljs-number">0.2</span>, out_marker_file=<span class="hljs-string">&quot;strategies.json&quot;</span>,out_summary_file=<span class="hljs-string">&quot;total_summary.csv&quot;</span>)
+</code></pre>
+<p>&#x6C47;&#x603B;&#x7684;&#x56DE;&#x6D4B;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x3002;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x96BE;&#x53D1;&#x73B0;&#xFF0C;&#x867D;&#x7136;&#x8BBE;&#x7F6E;&#x6B62;&#x635F;&#x4EE5;&#x540E;&#xFF0C;&#x5BF9;&#x63D0;&#x9AD8;<strong>&#x6536;&#x76CA;&#x98CE;&#x9669;&#x6BD4;</strong>&#x6709;&#x5F88;&#x5927;&#x7684;&#x4FC3;&#x8FDB;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x662F;-0.2&#x70B9;&#x6B62;&#x635F;&#xFF0C;<strong>&#x6536;&#x76CA;&#x98CE;&#x9669;&#x6BD4;</strong>&#x53EF;&#x4EE5;&#x8FBE;&#x5230;<strong>17&#x500D;</strong>&#x4EE5;&#x4E0A;&#x3002;&#x4F46;&#x662F;&#x4ED8;&#x51FA;&#x7684;&#x4EE3;&#x4EF7;&#x5C31;&#x662F;&#x603B;&#x6536;&#x76CA;&#x7684;&#x4E0B;&#x964D;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86;&#x6B62;&#x635F;&#x70B9;&#x4EE5;&#x540E;&#xFF0C;&#x6700;&#x7EC8;<strong>&#x51C0;&#x6536;&#x76CA;</strong>&#x6BD4;&#x672A;&#x8BBE;&#x7F6E;&#x6B62;&#x635F;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;<strong>&#x5C11;&#x4E86;&#x7EA6;30&#x4E07;~40&#x4E07;&#xFF0C;&#x7EA6;&#x4E3A;&#x539F;&#x6765;&#x7684;1/3~1/2</strong>&#x3002;
+<img src="https://segmentfault.com/img/bVcOC43" alt="&#x6B62;&#x635F;&#x903B;&#x8F91;&#x56DE;&#x6D4B;&#x6C47;&#x603B;"></p>
+<h3 id="&#x52A0;&#x5165;&#x6B62;&#x76C8;">&#x52A0;&#x5165;&#x6B62;&#x76C8;</h3>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x6B62;&#x76C8;&#x903B;&#x8F91;&#x3002;&#x672C;&#x6587;&#x4E3A;&#x4E86;&#x7B80;&#x5316;&#x903B;&#x8F91;&#xFF0C;&#x91C7;&#x7528;<strong>&#x56FA;&#x5B9A;&#x70B9;&#x4F4D;&#x6B62;&#x76C8;</strong>&#x3002;
+&#x4E3A;&#x4E86;&#x9501;&#x5B9A;&#x66F4;&#x591A;&#x5229;&#x6DA6;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x6B62;&#x76C8;&#x70B9;&#x7684;&#x8303;&#x56F4;&#x8BBE;&#x7F6E;&#x4E3A;0~500&#xFF0C;&#x6BCF;&#x6B21;5.0&#x4E00;&#x8DF3;&#x3002;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">runStopProfOptimizer</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6570;&#x4E3A;8</span>
+    optimizer = WtCtaOptimizer(worker_num=<span class="hljs-number">4</span>)
+
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165;&#x7B56;&#x7565;&#x7C7B;&#x578B;&#x5373;&#x53EF;&#xFF0C;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x7B56;&#x7565;ID&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x7528;&#x4E8E;&#x533A;&#x5206;&#x6BCF;&#x4E2A;&#x7B56;&#x7565;&#x7684;&#x5B9E;&#x4F8B;</span>
+    optimizer.set_strategy(StraDualThrust, <span class="hljs-string">&quot;Dt_IF_SP_&quot;</span>)
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x56FA;&#x5B9A;&#x53C2;&#x6570;</span>
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;barCnt&quot;</span>, val=<span class="hljs-number">50</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;period&quot;</span>, val=<span class="hljs-string">&quot;m5&quot;</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;days&quot;</span>, val=<span class="hljs-number">30</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;code&quot;</span>, val=<span class="hljs-string">&quot;CFFEX.IF.HOT&quot;</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;k1&quot;</span>, val=<span class="hljs-number">0.4</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;k2&quot;</span>, val=<span class="hljs-number">0.4</span>)
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x4E00;&#x822C;&#x6570;&#x503C;&#x7C7B;&#x53C2;&#x6570;</span>
+    optimizer.add_mutable_param(name=<span class="hljs-string">&quot;spTicks&quot;</span>, start_val=<span class="hljs-number">0</span>, end_val=<span class="hljs-number">500</span>, step_val=<span class="hljs-number">5</span>, ndigits = <span class="hljs-number">1</span>)
+
+    <span class="hljs-comment"># &#x914D;&#x7F6E;&#x56DE;&#x6D4B;&#x73AF;&#x5883;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5C06;&#x76F4;&#x63A5;&#x56DE;&#x6D4B;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x52A8;&#x6001;&#x4F20;&#x9012;&#xFF0C;&#x4F18;&#x5316;&#x5668;&#x4E2D;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x52A8;&#x6001;&#x6784;&#x9020;&#x56DE;&#x6D4B;&#x5F15;&#x64CE;</span>
+    optimizer.config_backtest_env(deps_dir=<span class="hljs-string">&apos;./common/&apos;</span>, cfgfile=<span class="hljs-string">&apos;configbt.json&apos;</span>, storage_type=<span class="hljs-string">&quot;csv&quot;</span>, storage_path=<span class="hljs-string">&quot;./storage/&quot;</span>)
+    optimizer.config_backtest_time(start_time=<span class="hljs-number">201909100930</span>, end_time=<span class="hljs-number">202010121500</span>)
+
+    <span class="hljs-comment"># &#x542F;&#x52A8;&#x4F18;&#x5316;&#x5668;</span>
+    optimizer.go(interval=<span class="hljs-number">0.2</span>, out_marker_file=<span class="hljs-string">&quot;strategies.json&quot;</span>,out_summary_file=<span class="hljs-string">&quot;total_summary_sp.csv&quot;</span>)
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x6C47;&#x603B;&#x7684;&#x7ED3;&#x679C;&#x4E2D;<strong>&#x6536;&#x76CA;&#x98CE;&#x9669;&#x6BD4;&#x5927;&#x4E8E;4</strong>&#x7684;&#x622A;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;
+<img src="https://segmentfault.com/img/bVcOC6p" alt="&#x6B62;&#x76C8;&#x903B;&#x8F91;&#x56DE;&#x6D4B;&#x6C47;&#x603B;">
+&#x7531;&#x4E0A;&#x56FE;&#x53EF;&#x4EE5;&#x89C1;&#xFF0C;&#x6B62;&#x76C8;&#x903B;&#x8F91;&#x5BF9;&#x7B56;&#x7565;&#x7EE9;&#x6548;&#x7684;&#x63D0;&#x5347;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x660E;&#x663E;&#x7684;&#xFF0C;&#x4F46;&#x662F;<strong>&#x5F53;&#x6B62;&#x76C8;&#x70B9;&#x4F4D;&#x5728;150&#x70B9;&#x5230;230&#x4E4B;&#x95F4;&#xFF0C;&#x6536;&#x76CA;&#x98CE;&#x9669;&#x6BD4;&#x57FA;&#x672C;&#x4E0A;&#x8FBE;&#x5230;&#x7A33;&#x5B9A;</strong>&#xFF0C;&#x7B56;&#x7565;&#x7EE9;&#x6548;&#x63D0;&#x5347;&#x7EA6;10%&#x4EE5;&#x4E0A;&#x3002;</p>
+<h3 id="&#x5B8C;&#x6574;&#x56DE;&#x6D4B;">&#x5B8C;&#x6574;&#x56DE;&#x6D4B;</h3>
+<p>&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#xFF0C;&#x6B62;&#x76C8;&#x6B62;&#x635F;&#x5F53;&#x7136;&#x4E0D;&#x53EF;&#x80FD;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x4E92;&#x76F8;&#x72EC;&#x7ACB;&#x7684;&#x903B;&#x8F91;&#x6765;&#x4F7F;&#x7528;&#xFF0C;&#x53CD;&#x800C;&#x662F;&#x914D;&#x5408;&#x4F7F;&#x7528;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x6700;&#x540E;&#x518D;&#x5C06;&#x6B62;&#x76C8;&#x6B62;&#x635F;&#x7684;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x8054;&#x5408;&#x4F18;&#x5316;&#x3002;
+&#x6839;&#x636E;&#x4E0A;&#x9762;&#x7684;&#x56DE;&#x6D4B;&#x7ED3;&#x679C;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;<strong>&#x6B62;&#x76C8;&#x70B9;&#x4F4D;&#x7684;&#x8303;&#x56F4;&#x63A7;&#x5236;&#x5728;150&#x5230;230&#x4E4B;&#x95F4;&#xFF0C;&#x6B62;&#x635F;&#x70B9;&#x4F4D;&#x63A7;&#x5236;&#x5728;-30&#x5230;-10&#x4E4B;&#x95F4;</strong>&#x3002;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">runStopAllOptimizer</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6570;&#x4E3A;8</span>
+    optimizer = WtCtaOptimizer(worker_num=<span class="hljs-number">4</span>)
+
+    <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165;&#x7B56;&#x7565;&#x7C7B;&#x578B;&#x5373;&#x53EF;&#xFF0C;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x7B56;&#x7565;ID&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x7528;&#x4E8E;&#x533A;&#x5206;&#x6BCF;&#x4E2A;&#x7B56;&#x7565;&#x7684;&#x5B9E;&#x4F8B;</span>
+    optimizer.set_strategy(StraDualThrust, <span class="hljs-string">&quot;Dt_IF_ALL_&quot;</span>)
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x56FA;&#x5B9A;&#x53C2;&#x6570;</span>
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;barCnt&quot;</span>, val=<span class="hljs-number">50</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;period&quot;</span>, val=<span class="hljs-string">&quot;m5&quot;</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;days&quot;</span>, val=<span class="hljs-number">30</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;code&quot;</span>, val=<span class="hljs-string">&quot;CFFEX.IF.HOT&quot;</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;k1&quot;</span>, val=<span class="hljs-number">0.4</span>)
+    optimizer.add_fixed_param(name=<span class="hljs-string">&quot;k2&quot;</span>, val=<span class="hljs-number">0.4</span>)
+
+    <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x4E00;&#x822C;&#x6570;&#x503C;&#x7C7B;&#x53C2;&#x6570;</span>
+    optimizer.add_mutable_param(name=<span class="hljs-string">&quot;slTicks&quot;</span>, start_val=<span class="hljs-number">-30</span>, end_val=<span class="hljs-number">-10</span>, step_val=<span class="hljs-number">1</span>, ndigits = <span class="hljs-number">1</span>)
+    optimizer.add_mutable_param(name=<span class="hljs-string">&quot;spTicks&quot;</span>, start_val=<span class="hljs-number">150</span>, end_val=<span class="hljs-number">230</span>, step_val=<span class="hljs-number">2</span>, ndigits = <span class="hljs-number">1</span>)
+
+    <span class="hljs-comment"># &#x914D;&#x7F6E;&#x56DE;&#x6D4B;&#x73AF;&#x5883;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5C06;&#x76F4;&#x63A5;&#x56DE;&#x6D4B;&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x52A8;&#x6001;&#x4F20;&#x9012;&#xFF0C;&#x4F18;&#x5316;&#x5668;&#x4E2D;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#x52A8;&#x6001;&#x6784;&#x9020;&#x56DE;&#x6D4B;&#x5F15;&#x64CE;</span>
+    optimizer.config_backtest_env(deps_dir=<span class="hljs-string">&apos;./common/&apos;</span>, cfgfile=<span class="hljs-string">&apos;configbt.json&apos;</span>, storage_type=<span class="hljs-string">&quot;csv&quot;</span>, storage_path=<span class="hljs-string">&quot;./storage/&quot;</span>)
+    optimizer.config_backtest_time(start_time=<span class="hljs-number">201909100930</span>, end_time=<span class="hljs-number">202010121500</span>)
+
+    <span class="hljs-comment"># &#x542F;&#x52A8;&#x4F18;&#x5316;&#x5668;</span>
+    optimizer.go(interval=<span class="hljs-number">0.2</span>, out_marker_file=<span class="hljs-string">&quot;strategies.json&quot;</span>,out_summary_file=<span class="hljs-string">&quot;total_summary_all.csv&quot;</span>)
+</code></pre>
+<p>&#x56DE;&#x6D4B;&#x7ED3;&#x679C;&#x6C47;&#x603B;&#x8868;&#x5982;&#x4E0B;&#xFF1A;
+<img src="https://segmentfault.com/img/bVcOC7m" alt="&#x6B62;&#x76C8;&#x6B62;&#x635F;&#x56DE;&#x6D4B;&#x6C47;&#x603B;">
+&#x4ECE;&#x4E0A;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6765;&#xFF0C;&#x6B62;&#x76C8;&#x6B62;&#x635F;&#x5B8C;&#x6574;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5BF9;&#x4E8E;&#x63D0;&#x9AD8;&#x6536;&#x76CA;&#x98CE;&#x9669;&#x6BD4;&#x8FD8;&#x662F;&#x6709;&#x63D0;&#x5347;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x51C0;&#x5229;&#x6DA6;&#x8FD8;&#x662F;&#x4F1A;&#x6BD4;&#x65E0;&#x6B62;&#x76C8;&#x6B62;&#x635F;&#x7684;&#x65F6;&#x5019;&#x964D;&#x4F4E;&#x4E0D;&#x5C11;&#x3002;
+&#x6211;&#x4EEC;&#x518D;&#x9009;&#x62E9;&#x6536;&#x76CA;&#x98CE;&#x9669;&#x6BD4;&#x6700;&#x9AD8;&#x7684;&#x4E00;&#x7EC4;&#x53C2;&#x6570;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x7B56;&#x7565;&#x7684;&#x7EE9;&#x6548;&#x5206;&#x6790;&#x3002;
+<img src="https://segmentfault.com/img/bVcOC7v" alt="&#x5E26;&#x6B62;&#x76C8;&#x6B62;&#x635F;&#x6700;&#x4F18;&#x53C2;&#x6570;&#x7EE9;&#x6548;">
+&#x6700;&#x5927;&#x56DE;&#x64A4;&#x5E76;&#x6CA1;&#x6709;&#x6BD4;&#x65E0;&#x6B62;&#x76C8;&#x6B62;&#x635F;&#x7684;&#x903B;&#x8F91;&#x4F4E;&#xFF0C;&#x53CD;&#x800C;&#x76F4;&#x63A5;&#x635F;&#x5931;&#x4E86;&#x6536;&#x76CA;&#x7387;&#x3002;
+&#x6211;&#x4EEC;&#x6700;&#x540E;&#x518D;&#x770B;&#x4E00;&#x4E0B;&#x53EA;&#x6709;&#x6B62;&#x76C8;&#x903B;&#x8F91;&#x7684;&#x6700;&#x4F18;&#x53C2;&#x6570;&#x7684;&#x7EE9;&#x6548;&#x5206;&#x6790;&#x3002;
+<img src="https://segmentfault.com/img/bVcOC7y" alt="&#x4EC5;&#x6B62;&#x76C8;&#x7684;&#x6700;&#x4F18;&#x53C2;&#x6570;&#x7EE9;&#x6548;">
+&#x7EFC;&#x5408;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6765;&#xFF0C;&#x6B62;&#x635F;&#x903B;&#x8F91;&#x5E76;&#x6CA1;&#x6709;&#x5BF9;&#x7B56;&#x7565;&#x7EE9;&#x6548;&#x6709;&#x6BD4;&#x8F83;&#x6B63;&#x5411;&#x7684;&#x6539;&#x5584;&#xFF0C;&#x53CD;&#x800C;&#x6B62;&#x76C8;&#x903B;&#x8F91;&#x80FD;&#x9501;&#x5B9A;&#x4E0D;&#x5C11;&#x539F;&#x672C;&#x8981;&#x56DE;&#x5410;&#x7684;&#x5229;&#x6DA6;&#x3002;&#x6B62;&#x635F;&#x65E0;&#x6548;&#x7684;&#x539F;&#x56E0;&#x4F55;&#x5728;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x56E0;&#x4E3A;&#x6B62;&#x635F;&#x70B9;&#x4F4D;&#x7684;&#x8303;&#x56F4;&#x8BBE;&#x7F6E;&#x4E0D;&#x5408;&#x7406;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x56E0;&#x4E3A;&#x522B;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x4E0D;&#x5728;&#x672C;&#x6587;&#x7684;&#x8BA8;&#x8BBA;&#x8303;&#x56F4;&#x4E86;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#x3002;</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mystrategy.html" class="navigation navigation-prev " aria-label="Previous page: 回测自己的策略">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="product.html" class="navigation navigation-next " aria-label="Next page: 实盘完整攻略">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"优化自己的策略","level":"1.2.5","depth":2,"next":{"title":"实盘完整攻略","level":"1.2.6","depth":2,"path":"product.md","ref":"product.md","articles":[]},"previous":{"title":"回测自己的策略","level":"1.2.4","depth":2,"path":"mystrategy.md","ref":"mystrategy.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-一站式量化交易管理框架","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"WonderTrader官方文档"},"file":{"path":"optimizer.md","mtime":"2021-03-13T10:00:01.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-13T09:58:40.653Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
