@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
         <meta name="author" content="WonderTrader">
-        
+        <meta name="referrer" content="never">
         
     
     <link rel="stylesheet" href="gitbook/style.css">
@@ -502,63 +502,67 @@
 <p>&#x672C;&#x6587;&#x5C06;&#x4EE5;<code>tushare</code>&#x6570;&#x636E;&#x6E90;&#x4E3A;&#x4F8B;&#xFF0C;&#x6F14;&#x793A;&#x4E00;&#x4E0B;&#x6570;&#x636E;&#x8F85;&#x52A9;&#x6A21;&#x5757;&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;&#x3002;</p>
 <h3 id="&#x6A21;&#x5757;&#x521D;&#x59CB;&#x5316;">&#x6A21;&#x5757;&#x521D;&#x59CB;&#x5316;</h3>
 <ul>
-<li>&#x9996;&#x5148;&#xFF0C;&#x521B;&#x5EFA;<code>tushare</code>&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x8F85;&#x52A9;&#x6A21;&#x5757;&#xFF1A;
-```py
-from <strong>wtpy</strong>.apps.datahelper import DHFactory as DHF</li>
+<li><p>&#x9996;&#x5148;&#xFF0C;&#x521B;&#x5EFA;<code>tushare</code>&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x8F85;&#x52A9;&#x6A21;&#x5757;&#xFF1A;</p>
+<pre><code class="lang-py">  <span class="hljs-keyword">from</span> **wtpy**.apps.datahelper <span class="hljs-keyword">import</span> DHFactory <span class="hljs-keyword">as</span> DHF
+
+  hlper = DHF.createHelper(<span class="hljs-string">&quot;tushare&quot;</span>)
+</code></pre>
+</li>
+<li><p>&#x521B;&#x5EFA;&#x597D;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x5BF9;<code>tushare</code>&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;&#xFF1A;</p>
+<pre><code class="lang-py">  hlper.auth(**{<span class="hljs-string">&quot;token&quot;</span>:<span class="hljs-string">&quot;your token of tushare&quot;</span>,<span class="hljs-string">&quot;use_pro&quot;</span>:<span class="hljs-keyword">True</span>})
+</code></pre>
+<p>&#x2003;&#x2003;&#x503C;&#x5F97;&#x4E00;&#x63D0;&#x7684;&#x662F;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>use_pro</code>&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x4E0D;&#x662F;<code>tushare</code>&#x8BA4;&#x8BC1;&#x9700;&#x8981;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x7528;&#x4E8E;&#x63A7;&#x5236;<code>tushare</code>&#x8C03;&#x7528;&#x7684;&#x63A5;&#x53E3;&#x7684;&#xFF0C;&#x5982;&#x679C;<code>use_pro</code>&#x4E3A;<code>True</code>&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8C03;&#x7528;<code>tushare</code>&#x7684;<code>pro_bar</code>&#x63A5;&#x53E3;&#x8BFB;&#x53D6;&#x5386;&#x53F2;K&#x7EBF;&#x6570;&#x636E;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x8C03;&#x7528;&#x8001;&#x7248;&#x672C;&#x7684;&#x63A5;&#x53E3;<code>get_k_data</code>&#x8BFB;&#x53D6;&#x5386;&#x53F2;K&#x7EBF;&#x6570;&#x636E;&#x3002;&#x4E4B;&#x6240;&#x4EE5;&#x8FD9;&#x6837;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;<code>pro_bar</code>&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5206;&#x949F;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x79EF;&#x5206;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x8001;&#x7684;&#x63A5;&#x53E3;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x79EF;&#x5206;&#x7684;&#x3002;</p>
+</li>
 </ul>
-<p>hlper = DHF.createHelper(&quot;tushare&quot;)</p>
-<pre><code>
-* &#x521B;&#x5EFA;&#x597D;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x5BF9;`tushare`&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;&#xFF1A;
-```py
-hlper.auth(**{&quot;token&quot;:&quot;your token of tushare&quot;,&quot;use_pro&quot;:True})
-</code></pre><p>&#x2003;&#x2003;&#x503C;&#x5F97;&#x4E00;&#x63D0;&#x7684;&#x662F;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>use_pro</code>&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x4E0D;&#x662F;<code>tushare</code>&#x8BA4;&#x8BC1;&#x9700;&#x8981;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x7528;&#x4E8E;&#x63A7;&#x5236;<code>tushare</code>&#x8C03;&#x7528;&#x7684;&#x63A5;&#x53E3;&#x7684;&#xFF0C;&#x5982;&#x679C;<code>use_pro</code>&#x4E3A;<code>True</code>&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8C03;&#x7528;<code>tushare</code>&#x7684;<code>pro_bar</code>&#x63A5;&#x53E3;&#x8BFB;&#x53D6;&#x5386;&#x53F2;K&#x7EBF;&#x6570;&#x636E;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x8C03;&#x7528;&#x8001;&#x7248;&#x672C;&#x7684;&#x63A5;&#x53E3;<code>get_k_data</code>&#x8BFB;&#x53D6;&#x5386;&#x53F2;K&#x7EBF;&#x6570;&#x636E;&#x3002;&#x4E4B;&#x6240;&#x4EE5;&#x8FD9;&#x6837;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;<code>pro_bar</code>&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5206;&#x949F;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x79EF;&#x5206;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x8001;&#x7684;&#x63A5;&#x53E3;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x79EF;&#x5206;&#x7684;&#x3002;</p>
 <h3 id="&#x4E0B;&#x8F7D;&#x6570;&#x636E;&#x5230;&#x6587;&#x4EF6;&#x4E2D;">&#x4E0B;&#x8F7D;&#x6570;&#x636E;&#x5230;&#x6587;&#x4EF6;&#x4E2D;</h3>
 <ul>
-<li>&#x7136;&#x540E;&#x8C03;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6F14;&#x793A;&#x4E86;&#x5C06;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#xFF1A;
-```py<h1 id="&#x5C06;&#x4EE3;&#x7801;&#x5217;&#x8868;&#x4E0B;&#x8F7D;&#x5230;&#x6587;&#x4EF6;&#x4E2D;">&#x5C06;&#x4EE3;&#x7801;&#x5217;&#x8868;&#x4E0B;&#x8F7D;&#x5230;&#x6587;&#x4EF6;&#x4E2D;</h1>
-hlper.dmpCodeListToFile(filename = &apos;codes.json&apos;, hasStock = True, hasIndex = True)</li>
-</ul>
-<h1 id="&#x5C06;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x4E0B;&#x8F7D;&#x5230;&#x6587;&#x4EF6;&#x4E2D;">&#x5C06;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x4E0B;&#x8F7D;&#x5230;&#x6587;&#x4EF6;&#x4E2D;</h1>
-<p>hlper.dmpAdjFactorsToFile(codes=[&apos;SSE.600000&apos;,&apos;SZSE.000001&apos;], filename=&quot;./adjfactors.json&quot;)</p>
-<h1 id="&#x5C06;k&#x7EBF;&#x4E0B;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;">&#x5C06;K&#x7EBF;&#x4E0B;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;</h1>
-<p>hlper.dmpBarsToFile(&quot;./&quot;, codes = [&apos;SSE.600000&apos;,&apos;SZSE.000001&apos;], period=&quot;day&quot;)</p>
-<pre><code>
-&#x4EE3;&#x7801;&#x5217;&#x8868;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;
-![&#x4EE3;&#x7801;&#x5217;&#x8868;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;](https://segmentfault.com/img/bVcO4ze)
+<li><p>&#x7136;&#x540E;&#x8C03;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6F14;&#x793A;&#x4E86;&#x5C06;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-py">  <span class="hljs-comment"># &#x5C06;&#x4EE3;&#x7801;&#x5217;&#x8868;&#x4E0B;&#x8F7D;&#x5230;&#x6587;&#x4EF6;&#x4E2D;</span>
+  hlper.dmpCodeListToFile(filename = <span class="hljs-string">&apos;codes.json&apos;</span>, hasStock = <span class="hljs-keyword">True</span>, hasIndex = <span class="hljs-keyword">True</span>)
 
-&#x4EE3;&#x7801;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x793A;&#x610F;
-```json
-{
-    &quot;SSE&quot;: {
-        &quot;000001&quot;: {
-            &quot;code&quot;: &quot;000001&quot;,
-            &quot;exchg&quot;: &quot;SSE&quot;,
-            &quot;name&quot;: &quot;&#x4E0A;&#x8BC1;&#x6307;&#x6570;&quot;,
-            &quot;product&quot;: &quot;IDX&quot;
+  <span class="hljs-comment"># &#x5C06;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x4E0B;&#x8F7D;&#x5230;&#x6587;&#x4EF6;&#x4E2D;</span>
+  hlper.dmpAdjFactorsToFile(codes=[<span class="hljs-string">&apos;SSE.600000&apos;</span>,<span class="hljs-string">&apos;SZSE.000001&apos;</span>], filename=<span class="hljs-string">&quot;./adjfactors.json&quot;</span>)
+
+  <span class="hljs-comment"># &#x5C06;K&#x7EBF;&#x4E0B;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;</span>
+  hlper.dmpBarsToFile(<span class="hljs-string">&quot;./&quot;</span>, codes = [<span class="hljs-string">&apos;SSE.600000&apos;</span>,<span class="hljs-string">&apos;SZSE.000001&apos;</span>], period=<span class="hljs-string">&quot;day&quot;</span>)
+</code></pre>
+</li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x5217;&#x8868;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;
+<img src="https://segmentfault.com/img/bVcO4ze" alt="&#x4EE3;&#x7801;&#x5217;&#x8868;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;"></p>
+<p>&#x4EE3;&#x7801;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x793A;&#x610F;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;SSE&quot;</span>: {
+        <span class="hljs-string">&quot;000001&quot;</span>: {
+            <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-string">&quot;000001&quot;</span>,
+            <span class="hljs-string">&quot;exchg&quot;</span>: <span class="hljs-string">&quot;SSE&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x4E0A;&#x8BC1;&#x6307;&#x6570;&quot;</span>,
+            <span class="hljs-string">&quot;product&quot;</span>: <span class="hljs-string">&quot;IDX&quot;</span>
         },
-        &quot;600000&quot;: {
-            &quot;code&quot;: &quot;600000&quot;,
-            &quot;exchg&quot;: &quot;SSE&quot;,
-            &quot;name&quot;: &quot;&#x6D66;&#x53D1;&#x94F6;&#x884C;&quot;,
-            &quot;product&quot;: &quot;STK&quot;
+        <span class="hljs-string">&quot;600000&quot;</span>: {
+            <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-string">&quot;600000&quot;</span>,
+            <span class="hljs-string">&quot;exchg&quot;</span>: <span class="hljs-string">&quot;SSE&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x6D66;&#x53D1;&#x94F6;&#x884C;&quot;</span>,
+            <span class="hljs-string">&quot;product&quot;</span>: <span class="hljs-string">&quot;STK&quot;</span>
         }
     },
-    &quot;SZSE&quot;: {
-        &quot;000001&quot;: {
-            &quot;code&quot;: &quot;000001&quot;,
-            &quot;exchg&quot;: &quot;SZSE&quot;,
-            &quot;name&quot;: &quot;&#x5E73;&#x5B89;&#x94F6;&#x884C;&quot;,
-            &quot;product&quot;: &quot;STK&quot;
+    <span class="hljs-string">&quot;SZSE&quot;</span>: {
+        <span class="hljs-string">&quot;000001&quot;</span>: {
+            <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-string">&quot;000001&quot;</span>,
+            <span class="hljs-string">&quot;exchg&quot;</span>: <span class="hljs-string">&quot;SZSE&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5E73;&#x5B89;&#x94F6;&#x884C;&quot;</span>,
+            <span class="hljs-string">&quot;product&quot;</span>: <span class="hljs-string">&quot;STK&quot;</span>
         }
-        &quot;399001&quot;: {
-            &quot;code&quot;: &quot;399001&quot;,
-            &quot;exchg&quot;: &quot;SZSE&quot;,
-            &quot;name&quot;: &quot;&#x6DF1;&#x8BC1;&#x6210;&#x6307;&quot;,
-            &quot;product&quot;: &quot;IDX&quot;
+        <span class="hljs-string">&quot;399001&quot;</span>: {
+            <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-string">&quot;399001&quot;</span>,
+            <span class="hljs-string">&quot;exchg&quot;</span>: <span class="hljs-string">&quot;SZSE&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x6DF1;&#x8BC1;&#x6210;&#x6307;&quot;</span>,
+            <span class="hljs-string">&quot;product&quot;</span>: <span class="hljs-string">&quot;IDX&quot;</span>
         }
     }
 }
-</code></pre><p>&#x9664;&#x6743;&#x56E0;&#x5B50;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;
+</code></pre>
+<p>&#x9664;&#x6743;&#x56E0;&#x5B50;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;
 <img src="https://segmentfault.com/img/bVcO4zM" alt="&#x9664;&#x6743;&#x56E0;&#x5B50;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;"></p>
 <p>&#x9664;&#x6743;&#x56E0;&#x5B50;&#x6587;&#x4EF6;&#x793A;&#x610F;</p>
 <pre><code class="lang-json">{
@@ -612,7 +616,7 @@ hlper.dmpCodeListToFile(filename = &apos;codes.json&apos;, hasStock = True, hasI
     }
 }
 </code></pre>
-<p>K&#x7EBF;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;
+<p>K&#x7EBF;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;<br>
 <img src="https://segmentfault.com/img/bVcO4Ad" alt="K&#x7EBF;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x622A;&#x56FE;"></p>
 <p>K&#x7EBF;&#x6570;&#x636E;&#x793A;&#x610F;</p>
 <pre><code class="lang-csv">date,time,open,high,low,close,volume,turnover
@@ -643,72 +647,69 @@ dbHelper.initDB()
 </code></pre>
 </li>
 </ul>
-<p>&#x521B;&#x5EFA;&#x7A7A;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;
+<p>&#x521B;&#x5EFA;&#x7A7A;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;<br>
 <img src="https://segmentfault.com/img/bVcO4AL" alt="&#x521B;&#x5EFA;&#x7A7A;&#x6570;&#x636E;&#x5E93;"></p>
-<p>&#x521D;&#x59CB;&#x5316;&#x597D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;
+<p>&#x521D;&#x59CB;&#x5316;&#x597D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;<br>
 <img src="https://segmentfault.com/img/bVcO4AZ" alt="&#x521D;&#x59CB;&#x5316;&#x597D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;"></p>
 <h3 id="&#x4E0B;&#x8F7D;&#x6570;&#x636E;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;">&#x4E0B;&#x8F7D;&#x6570;&#x636E;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</h3>
 <ul>
-<li>&#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;&#x597D;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x4E86;&#xFF1A;
-```py<h1 id="&#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;">&#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</h1>
-hlper.dmpAdjFactorsToDB(dbHelper, codes=[&quot;SSE.600000&quot;,&apos;SSE.600001&apos;])</li>
+<li><p>&#x6570;&#x636E;&#x5E93;&#x521D;&#x59CB;&#x5316;&#x597D;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-py">  <span class="hljs-comment"># &#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</span>
+  hlper.dmpAdjFactorsToDB(dbHelper, codes=[<span class="hljs-string">&quot;SSE.600000&quot;</span>,<span class="hljs-string">&apos;SSE.600001&apos;</span>])
+
+  <span class="hljs-comment"># &#x4E0B;&#x8F7D;&#x5386;&#x53F2;K&#x7EBF;&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</span>
+  hlper.dmpBarsToDB(dbHelper, codes=[<span class="hljs-string">&quot;SSE.600000&quot;</span>,<span class="hljs-string">&apos;SSE.600001&apos;</span>], period=<span class="hljs-string">&quot;day&quot;</span>)
+</code></pre>
+</li>
 </ul>
-<h1 id="&#x4E0B;&#x8F7D;&#x5386;&#x53F2;k&#x7EBF;&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;">&#x4E0B;&#x8F7D;&#x5386;&#x53F2;K&#x7EBF;&#x5E76;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</h1>
-<p>hlper.dmpBarsToDB(dbHelper, codes=[&quot;SSE.600000&quot;,&apos;SSE.600001&apos;], period=&quot;day&quot;)</p>
-<pre><code>
-&#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5230;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;
-![&#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5230;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;](https://segmentfault.com/img/bVcO4A6)
-
-&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x8868;&#x622A;&#x56FE;
-![&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x8868;&#x622A;&#x56FE;](https://segmentfault.com/img/bVcO4Bc)
-
-&#x4E0B;&#x8F7D;&#x65E5;K&#x7EBF;&#x5230;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;
-![&#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5230;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;](https://segmentfault.com/img/bVcO4Bq)
-
-&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x65E5;K&#x7EBF;&#x8868;&#x622A;&#x56FE;
-![&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x8868;&#x622A;&#x56FE;](https://segmentfault.com/img/bVcO4Bz)
-
-## &#x6570;&#x636E;&#x7684;&#x540E;&#x7EED;&#x5904;&#x7406;
-&amp;emsp;&amp;emsp;&#x4E0A;&#x9762;&#x6F14;&#x793A;&#x4E86;**datahelper**&#x6A21;&#x5757;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x8BE5;&#x6A21;&#x5757;&#x80FD;&#x591F;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x5FEB;&#x901F;&#x62C9;&#x53D6;**WonderTrader**&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7684;&#x5386;&#x53F2;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7684;&#x964D;&#x4F4E;&#x7528;&#x6237;&#x521D;&#x6B21;&#x4F7F;&#x7528;**WonderTrader**&#x8FDB;&#x884C;&#x7B56;&#x7565;&#x56DE;&#x6D4B;&#x7684;&#x95E8;&#x69DB;&#x3002;
-
-&amp;emsp;&amp;emsp;&#x4E0D;&#x8FC7;&#x5728;&#x5B9E;&#x76D8;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x5B9E;&#x65BD;&#x7684;&#x7EC6;&#x8282;&#xFF0C;&#x672C;&#x6587;&#x4E5F;&#x505A;&#x4E00;&#x4E2A;&#x5927;&#x6982;&#x7684;&#x68B3;&#x7406;&#x3002;
-
-### &#x6807;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x89C4;&#x5219;
-- &#x671F;&#x8D27;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#xFF0C;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E3A;`CFFEX.IF.2103`&#xFF0C;&#x5176;&#x4E2D;**&#x90D1;&#x5546;&#x6240;&#x7684;&#x5408;&#x7EA6;&#xFF0C;&#x6708;&#x4EFD;&#x4E5F;&#x8981;&#x6269;&#x5C55;&#x4E3A;4&#x4F4D;**
-- &#x671F;&#x8D27;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#xFF0C;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E3A;`CFFEX.IF.HOT`&#xFF0C;**WonderTrader**&#x4F1A;&#x6839;&#x636E;&#x4E00;&#x4E2A;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x89C4;&#x5219;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x6620;&#x5C04;&#x5230;&#x5206;&#x6708;&#x5408;&#x7EA6;
-- &#x8BC1;&#x5238;&#x4EE3;&#x7801;&#xFF0C;&#x80A1;&#x7968;&#x7684;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E3A;`SSE.STK.600000`&#xFF0C;&#x6307;&#x6570;&#x7684;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E3A;`SZSE.IDX.399001`&#xFF0C;&#x652F;&#x6301;&#x7B80;&#x5199;&#x683C;&#x5F0F;`SSE.600000`
-
-### &#x4E3B;&#x529B;&#x5408;&#x7EA6;
-&amp;emsp;&amp;emsp;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x6620;&#x5C04;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x9700;&#x8981;&#x6BCF;&#x5929;&#x7EF4;&#x62A4;&#xFF0C;**WonderTrader**&#x4F1A;&#x6839;&#x636E;&#x89C4;&#x5219;&#x81EA;&#x52A8;&#x5904;&#x7406;&#x6620;&#x5C04;&#xFF0C;&#x7528;&#x6237;&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528;`.HOT`&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x89C4;&#x5219;&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;
-```json
-{
-    &quot;CFFEX&quot;: {
-        &quot;IC&quot;: [
+<p>&#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5230;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;
+<img src="https://segmentfault.com/img/bVcO4A6" alt="&#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5230;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;"></p>
+<p>&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x8868;&#x622A;&#x56FE;
+<img src="https://segmentfault.com/img/bVcO4Bc" alt="&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x8868;&#x622A;&#x56FE;"></p>
+<p>&#x4E0B;&#x8F7D;&#x65E5;K&#x7EBF;&#x5230;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;
+<img src="https://segmentfault.com/img/bVcO4Bq" alt="&#x4E0B;&#x8F7D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x5230;&#x6570;&#x636E;&#x5E93;&#x622A;&#x56FE;"></p>
+<p>&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x65E5;K&#x7EBF;&#x8868;&#x622A;&#x56FE;
+<img src="https://segmentfault.com/img/bVcO4Bz" alt="&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x9664;&#x6743;&#x56E0;&#x5B50;&#x8868;&#x622A;&#x56FE;"></p>
+<h2 id="&#x6570;&#x636E;&#x7684;&#x540E;&#x7EED;&#x5904;&#x7406;">&#x6570;&#x636E;&#x7684;&#x540E;&#x7EED;&#x5904;&#x7406;</h2>
+<p>&#x2003;&#x2003;&#x4E0A;&#x9762;&#x6F14;&#x793A;&#x4E86;<strong>datahelper</strong>&#x6A21;&#x5757;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x8BE5;&#x6A21;&#x5757;&#x80FD;&#x591F;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x5FEB;&#x901F;&#x62C9;&#x53D6;<strong>WonderTrader</strong>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7684;&#x5386;&#x53F2;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7684;&#x964D;&#x4F4E;&#x7528;&#x6237;&#x521D;&#x6B21;&#x4F7F;&#x7528;<strong>WonderTrader</strong>&#x8FDB;&#x884C;&#x7B56;&#x7565;&#x56DE;&#x6D4B;&#x7684;&#x95E8;&#x69DB;&#x3002;</p>
+<p>&#x2003;&#x2003;&#x4E0D;&#x8FC7;&#x5728;&#x5B9E;&#x76D8;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x5B9E;&#x65BD;&#x7684;&#x7EC6;&#x8282;&#xFF0C;&#x672C;&#x6587;&#x4E5F;&#x505A;&#x4E00;&#x4E2A;&#x5927;&#x6982;&#x7684;&#x68B3;&#x7406;&#x3002;</p>
+<h3 id="&#x6807;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x89C4;&#x5219;">&#x6807;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x89C4;&#x5219;</h3>
+<ul>
+<li>&#x671F;&#x8D27;&#x5408;&#x7EA6;&#x4EE3;&#x7801;&#xFF0C;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E3A;<code>CFFEX.IF.2103</code>&#xFF0C;&#x5176;&#x4E2D;<strong>&#x90D1;&#x5546;&#x6240;&#x7684;&#x5408;&#x7EA6;&#xFF0C;&#x6708;&#x4EFD;&#x4E5F;&#x8981;&#x6269;&#x5C55;&#x4E3A;4&#x4F4D;</strong></li>
+<li>&#x671F;&#x8D27;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#xFF0C;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E3A;<code>CFFEX.IF.HOT</code>&#xFF0C;<strong>WonderTrader</strong>&#x4F1A;&#x6839;&#x636E;&#x4E00;&#x4E2A;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x89C4;&#x5219;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x6620;&#x5C04;&#x5230;&#x5206;&#x6708;&#x5408;&#x7EA6;</li>
+<li>&#x8BC1;&#x5238;&#x4EE3;&#x7801;&#xFF0C;&#x80A1;&#x7968;&#x7684;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E3A;<code>SSE.STK.600000</code>&#xFF0C;&#x6307;&#x6570;&#x7684;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E3A;<code>SZSE.IDX.399001</code>&#xFF0C;&#x652F;&#x6301;&#x7B80;&#x5199;&#x683C;&#x5F0F;<code>SSE.600000</code></li>
+</ul>
+<h3 id="&#x4E3B;&#x529B;&#x5408;&#x7EA6;">&#x4E3B;&#x529B;&#x5408;&#x7EA6;</h3>
+<p>&#x2003;&#x2003;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x6620;&#x5C04;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x9700;&#x8981;&#x6BCF;&#x5929;&#x7EF4;&#x62A4;&#xFF0C;<strong>WonderTrader</strong>&#x4F1A;&#x6839;&#x636E;&#x89C4;&#x5219;&#x81EA;&#x52A8;&#x5904;&#x7406;&#x6620;&#x5C04;&#xFF0C;&#x7528;&#x6237;&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>.HOT</code>&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x89C4;&#x5219;&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;CFFEX&quot;</span>: {
+        <span class="hljs-string">&quot;IC&quot;</span>: [
             {
-                &quot;date&quot;: 20191018,
-                &quot;from&quot;: &quot;IC1910&quot;,
-                &quot;newclose&quot;: 4923.6,
-                &quot;oldclose&quot;: 5028.2,
-                &quot;to&quot;: &quot;IC1912&quot;
+                <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-number">20191018</span>,
+                <span class="hljs-string">&quot;from&quot;</span>: <span class="hljs-string">&quot;IC1910&quot;</span>,
+                <span class="hljs-string">&quot;newclose&quot;</span>: <span class="hljs-number">4923.6</span>,
+                <span class="hljs-string">&quot;oldclose&quot;</span>: <span class="hljs-number">5028.2</span>,
+                <span class="hljs-string">&quot;to&quot;</span>: <span class="hljs-string">&quot;IC1912&quot;</span>
             },
             {
-                &quot;date&quot;: 20191219,
-                &quot;from&quot;: &quot;IC1912&quot;,
-                &quot;newclose&quot;: 5208.6,
-                &quot;oldclose&quot;: 5244.4,
-                &quot;to&quot;: &quot;IC2003&quot;
+                <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-number">20191219</span>,
+                <span class="hljs-string">&quot;from&quot;</span>: <span class="hljs-string">&quot;IC1912&quot;</span>,
+                <span class="hljs-string">&quot;newclose&quot;</span>: <span class="hljs-number">5208.6</span>,
+                <span class="hljs-string">&quot;oldclose&quot;</span>: <span class="hljs-number">5244.4</span>,
+                <span class="hljs-string">&quot;to&quot;</span>: <span class="hljs-string">&quot;IC2003&quot;</span>
             },
             {
-                &quot;date&quot;: 20200320,
-                &quot;from&quot;: &quot;IC2003&quot;,
-                &quot;newclose&quot;: 5099.6,
-                &quot;oldclose&quot;: 5147.4,
-                &quot;to&quot;: &quot;IC2004&quot;
+                <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-number">20200320</span>,
+                <span class="hljs-string">&quot;from&quot;</span>: <span class="hljs-string">&quot;IC2003&quot;</span>,
+                <span class="hljs-string">&quot;newclose&quot;</span>: <span class="hljs-number">5099.6</span>,
+                <span class="hljs-string">&quot;oldclose&quot;</span>: <span class="hljs-number">5147.4</span>,
+                <span class="hljs-string">&quot;to&quot;</span>: <span class="hljs-string">&quot;IC2004&quot;</span>
             }
         ]
     }
 }
-</code></pre><p>&#x2003;&#x2003;<strong>WonderTrader</strong>&#x5728;&#x8BFB;&#x53D6;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x7684;&#x5386;&#x53F2;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4F1A;&#x4F18;&#x5148;&#x8BFB;&#x53D6;&#x76F4;&#x63A5;&#x5BF9;&#x5E94;&#x7684;&#x5386;&#x53F2;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x5B58;&#x50A8;&#x6A21;&#x5F0F;&#x4E3A;&#x6587;&#x4EF6;&#x65F6;&#x4F1A;&#x5148;&#x8BFB;&#x53D6;&#x540D;&#x4E3A;<code>CFFEX.IF_HOT.dsb</code>&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6839;&#x636E;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x89C4;&#x5219;&#x8BFB;&#x53D6;&#x5206;&#x6708;&#x5408;&#x7EA6;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x62FC;&#x63A5;&#x3002;&#x800C;&#x5982;&#x679C;&#x5B58;&#x50A8;&#x6A21;&#x5F0F;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5219;&#x4F1A;&#x4F18;&#x5148;&#x8BFB;&#x53D6;&#x4EE3;&#x7801;&#x4E3A;<code>xx.HOT</code>&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6839;&#x636E;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x89C4;&#x5219;&#x8BFB;&#x53D6;&#x5206;&#x6708;&#x5408;&#x7EA6;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+</code></pre>
+<p>&#x2003;&#x2003;<strong>WonderTrader</strong>&#x5728;&#x8BFB;&#x53D6;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x7684;&#x5386;&#x53F2;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4F1A;&#x4F18;&#x5148;&#x8BFB;&#x53D6;&#x76F4;&#x63A5;&#x5BF9;&#x5E94;&#x7684;&#x5386;&#x53F2;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x5B58;&#x50A8;&#x6A21;&#x5F0F;&#x4E3A;&#x6587;&#x4EF6;&#x65F6;&#x4F1A;&#x5148;&#x8BFB;&#x53D6;&#x540D;&#x4E3A;<code>CFFEX.IF_HOT.dsb</code>&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6839;&#x636E;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x89C4;&#x5219;&#x8BFB;&#x53D6;&#x5206;&#x6708;&#x5408;&#x7EA6;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x62FC;&#x63A5;&#x3002;&#x800C;&#x5982;&#x679C;&#x5B58;&#x50A8;&#x6A21;&#x5F0F;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5219;&#x4F1A;&#x4F18;&#x5148;&#x8BFB;&#x53D6;&#x4EE3;&#x7801;&#x4E3A;<code>xx.HOT</code>&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6839;&#x636E;&#x4E3B;&#x529B;&#x5408;&#x7EA6;&#x89C4;&#x5219;&#x8BFB;&#x53D6;&#x5206;&#x6708;&#x5408;&#x7EA6;&#x7684;&#x6570;&#x636E;&#x3002;</p>
 <h3 id="&#x6536;&#x76D8;&#x4F5C;&#x4E1A;">&#x6536;&#x76D8;&#x4F5C;&#x4E1A;</h3>
 <p>&#x2003;&#x2003;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;&#x4EA4;&#x6613;&#x65E5;&#x7ED3;&#x675F;&#x4EE5;&#x540E;&#xFF0C;&#x4F1A;&#x5BF9;&#x884C;&#x60C5;&#x6570;&#x636E;&#x505A;&#x4E00;&#x4E2A;&#x76D8;&#x540E;&#x5904;&#x7406;&#xFF0C;&#x8FD9;&#x4E2A;&#x5904;&#x7406;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x53EB;&#x505A;&#x6536;&#x76D8;&#x4F5C;&#x4E1A;&#x3002;&#x6536;&#x76D8;&#x4F5C;&#x4E1A;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x5DE5;&#x4F5C;&#xFF1A;</p>
 <ul>
@@ -744,7 +745,7 @@ hlper.dmpAdjFactorsToDB(dbHelper, codes=[&quot;SSE.600000&quot;,&apos;SSE.600001
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"历史数据的处理","level":"1.2.3","depth":2,"next":{"title":"回测自己的策略","level":"1.2.4","depth":2,"path":"mystrategy.md","ref":"mystrategy.md","articles":[]},"previous":{"title":"开发环境搭建","level":"1.2.2","depth":2,"path":"devenv.md","ref":"devenv.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-一站式量化交易管理框架","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"WonderTrader官方文档"},"file":{"path":"histdata.md","mtime":"2021-03-13T09:48:53.490Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-13T09:58:40.653Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"历史数据的处理","level":"1.2.3","depth":2,"next":{"title":"回测自己的策略","level":"1.2.4","depth":2,"path":"mystrategy.md","ref":"mystrategy.md","articles":[]},"previous":{"title":"开发环境搭建","level":"1.2.2","depth":2,"path":"devenv.md","ref":"devenv.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","github","github-buttons","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/wondertrader/wondertrader"},"github-buttons":{"buttons":[{"user":"wondertrader","repo":"wondertrader","type":"star","size":"small","count":true}]},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"WonderTrader","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"WonderTrader-一站式量化交易管理框架","language":"zh-hans","links":{"sidebar":{"官网":"https://wondertrader.github.io"}},"gitbook":"3.2.3","description":"WonderTrader官方文档"},"file":{"path":"histdata.md","mtime":"2021-03-13T10:24:42.938Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-13T10:24:55.563Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
