@@ -140,6 +140,7 @@ $ sudo ./build_release.sh
 选择一个目录，然后右键点击该目录，选择“**Git克隆**”菜单
 
 ![image.png](http://wt.f-sailors.cn/devenv/25.png)
+
 URL设置为:<https://github.com/wondertrader/wondertrader.git>
 
 ![image.png](http://wt.f-sailors.cn/devenv/26.png)

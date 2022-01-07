@@ -1,4 +1,5 @@
-#### 安装wtpy
+安装wtpy
+
 ---
 * 安装python3.6以上的版本（32位、64位），安装完成以后输入以下命令，可以检查python的版本号
     ``` shell
@@ -103,23 +104,28 @@
     ```
     
 * 然后启动runBT.py进行回测，回测的执行如下
-    
-    ![alt 回测示例图](http://wt.f-sailors.cn/snapshots/bt_fut_snapshot.jpg)
-    
+  
+* ![alt 回测示例图](http://wt.f-sailors.cn/snapshots/bt_fut_snapshot.jpg)
+  
 * 回测完成以后，打开生成的绩效分析报表(xxxx.xlsx)，则可以查看策略的回测绩效
-    回测绩效概览
-    ![alt 回测绩效概览](http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary.png)
-    回测收益详情
     
-    ![alt 回测绩效详情](http://wt.f-sailors.cn/snapshots/ana_fut_snapshot.jpg)
+* 回测绩效概览
+    
+* ![alt 回测绩效概览](http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary.png)
+    
+* 回测收益详情
+    
+* ![alt 回测绩效详情](http://wt.f-sailors.cn/snapshots/ana_fut_snapshot.jpg)
     从上图的绩效分析可以看出，DualThrust策略，针对股指期货主力合约，在20190919到20191201这段时间内，这组参数下进行回测，一直处于回撤的状态，累计亏损达20%。可见，这不是一组好的参数。
     
 * 接下来我们调整参数，将K1和K2改成0.5和0.3，再进行回测和分析，得到如下结果
-    调整后的回测绩效总览
-    ![alt 回测绩效概览](http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary2.png)
+    
+* 调整后的回测绩效总览
+    
+* ![alt 回测绩效概览](http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary2.png)
     
 * 从上图可以看出，参数调整过以后的绩效远远好于调整之前。
-    
+  
 * 最后进行回测分析总结
     让我们简单的分析一下参数调整前和参数调整后绩效悬殊的原因。
     熟悉DualThrust的朋友肯定知道：DualThrus的信号原理其实就是价格突破。当上边界系数k1和下边界系数k2较小的时候，信号出现较多，但是容易遇到假突破，从而导致交易成本上升，最终出现净亏损；当k1和k2较大的时候，信号变少，但是又容易错失交易机会。
