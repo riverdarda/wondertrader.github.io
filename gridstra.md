@@ -68,7 +68,9 @@ class BaseCtaStrategy:
 
 第三步，读取当前价格与仓位，与第二部中所算出的两个列表进行对照，获得交易之后所要达到的仓位比例，也就是目标仓位，然后计算得出达到目标仓位所需交易的手数并进行相应的操作。
 
-第二步中创建的两个list示例如图：![](http://wt.f-sailors.cn/GridStra/2.png)
+第二步中创建的两个list示例如图：
+
+![](http://wt.f-sailors.cn/GridStra/2.png)
 
 - 最终完整策略代码如下
 

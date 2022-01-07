@@ -104,7 +104,7 @@ class BaseDataHelper:
 * 首先，创建`tushare`对应的数据辅助模块：
     ```py
     from **wtpy**.apps.datahelper import DHFactory as DHF
-
+    
     hlper = DHF.createHelper("tushare")
     ```
 
@@ -112,23 +112,23 @@ class BaseDataHelper:
     ```py
     hlper.auth(**{"token":"your token of tushare","use_pro":True})
     ```
-&emsp;&emsp;值得一提的是，上面的代码中没有一个参数`use_pro`，该参数不是`tushare`认证需要的，而是用于控制`tushare`调用的接口的，如果`use_pro`为`True`，那么就调用`tushare`的`pro_bar`接口读取历史K线数据，否则就调用老版本的接口`get_k_data`读取历史K线数据。之所以这样，是因为`pro_bar`接口获取分钟数据的时候需要积分的，但是老的接口是不需要积分的。
+    &emsp;&emsp;值得一提的是，上面的代码中没有一个参数`use_pro`，该参数不是`tushare`认证需要的，而是用于控制`tushare`调用的接口的，如果`use_pro`为`True`，那么就调用`tushare`的`pro_bar`接口读取历史K线数据，否则就调用老版本的接口`get_k_data`读取历史K线数据。之所以这样，是因为`pro_bar`接口获取分钟数据的时候需要积分的，但是老的接口是不需要积分的。
 
 ### 下载数据到文件中
 * 然后调用不同的接口获取数据，下面的代码演示了将数据下载到指定的文件中：
     ```py
     # 将代码列表下载到文件中
     hlper.dmpCodeListToFile(filename = 'codes.json', hasStock = True, hasIndex = True)
-
+    
     # 将除权因子下载到文件中
     hlper.dmpAdjFactorsToFile(codes=['SSE.600000','SZSE.000001'], filename="./adjfactors.json")
-
+    
     # 将K线下载到指定目录
     hlper.dmpBarsToFile("./", codes = ['SSE.600000','SZSE.000001'], period="day")
     ```
 
 代码列表下载截图
-![代码列表下载截图](https://segmentfault.com/img/bVcO4ze)
+![代码列表下载截图](http://wt.f-sailors.cn/histdata/1.png)
 
 代码列表文件示意
 ```json
@@ -165,7 +165,7 @@ class BaseDataHelper:
 ```
 
 除权因子下载截图
-![除权因子下载截图](https://segmentfault.com/img/bVcO4zM)
+![除权因子下载截图](http://wt.f-sailors.cn/histdata/2.png)
 
 
 除权因子文件示意
@@ -223,7 +223,7 @@ class BaseDataHelper:
 ```
 
 K线数据下载截图<br>
-![K线数据下载截图](https://segmentfault.com/img/bVcO4Ad)
+![K线数据下载截图](http://wt.f-sailors.cn/histdata/3.png)
 
 K线数据示意
 ```csv
@@ -257,32 +257,32 @@ dbHelper.initDB()
 ```
 
 创建空数据库截图<br>
-![创建空数据库](https://segmentfault.com/img/bVcO4AL)
+![创建空数据库](http://wt.f-sailors.cn/histdata/4.png)
 
 初始化好的数据库截图<br>
-![初始化好的数据库截图](https://segmentfault.com/img/bVcO4AZ)
+![初始化好的数据库截图](http://wt.f-sailors.cn/histdata/5.png)
 
 ### 下载数据到数据库中
 * 数据库初始化好了以后，就可以进行数据下载了：
     ```py
     # 下载除权因子并保存到数据库中
     hlper.dmpAdjFactorsToDB(dbHelper, codes=["SSE.600000",'SSE.600001'])
-
+    
     # 下载历史K线并保存到数据库中
     hlper.dmpBarsToDB(dbHelper, codes=["SSE.600000",'SSE.600001'], period="day")
     ```
 
 下载除权因子到数据库截图
-![下载除权因子到数据库截图](https://segmentfault.com/img/bVcO4A6)
+![下载除权因子到数据库截图](http://wt.f-sailors.cn/histdata/6.png)
 
 数据库中除权因子表截图
-![数据库中除权因子表截图](https://segmentfault.com/img/bVcO4Bc)
+![数据库中除权因子表截图](http://wt.f-sailors.cn/histdata/7.png)
 
 下载日K线到数据库截图
-![下载除权因子到数据库截图](https://segmentfault.com/img/bVcO4Bq)
+![下载除权因子到数据库截图](http://wt.f-sailors.cn/histdata/8.png)
 
 数据库中日K线表截图
-![数据库中除权因子表截图](https://segmentfault.com/img/bVcO4Bz)
+![数据库中除权因子表截图](http://wt.f-sailors.cn/histdata/9.png)
 
 ## 数据的后续处理
 &emsp;&emsp;上面演示了**datahelper**模块的用法，该模块能够帮助用户快速拉取**WonderTrader**可以直接使用的历史数据，可以有效的降低用户初次使用**WonderTrader**进行策略回测的门槛。
