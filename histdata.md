@@ -128,6 +128,7 @@ class BaseDataHelper:
     ```
 
 代码列表下载截图
+
 ![代码列表下载截图](http://wt.f-sailors.cn/histdata/1.png)
 
 代码列表文件示意
@@ -165,6 +166,7 @@ class BaseDataHelper:
 ```
 
 除权因子下载截图
+
 ![除权因子下载截图](http://wt.f-sailors.cn/histdata/2.png)
 
 
@@ -273,15 +275,19 @@ dbHelper.initDB()
     ```
 
 下载除权因子到数据库截图
+
 ![下载除权因子到数据库截图](http://wt.f-sailors.cn/histdata/6.png)
 
 数据库中除权因子表截图
+
 ![数据库中除权因子表截图](http://wt.f-sailors.cn/histdata/7.png)
 
 下载日K线到数据库截图
+
 ![下载除权因子到数据库截图](http://wt.f-sailors.cn/histdata/8.png)
 
 数据库中日K线表截图
+
 ![数据库中除权因子表截图](http://wt.f-sailors.cn/histdata/9.png)
 
 ## 数据的后续处理

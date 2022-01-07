@@ -63,9 +63,9 @@
     ```python
     from wtpy import WtBtEngine
     from wtpy.backtest import WtBtAnalyst
-
+    
     from Strategies.DualThrust import StraDualThrust
-
+    
     if __name__ == "__main__":
         #创建一个运行环境，并加入策略
         engine = WtBtEngine()
@@ -73,7 +73,7 @@
         engine.configBacktest(201909100930,201912011500)
         engine.configBTStorage(mode="csv", path=".\\storage\\")
         engine.commitBTConfig() #代码里的配置项，会覆盖配置文件configbt.json里的配置项
-
+    
         '''
         创建DualThrust策略的一个实例
         name    策略实例名称
@@ -87,38 +87,41 @@
         '''
         straInfo = StraDualThrust(name='pydt_IF', code="CFFEX.IF.HOT", barCnt=50, period="m5", days=30, k1=0.1, k2=0.1, isForStk=False)
         engine.set_strategy(straInfo)
-
+    
         #开始运行回测
         engine.run_backtest()
-
+    
         #创建绩效分析模块
         analyst = WtBtAnalyst()
         #将回测的输出数据目录传递给绩效分析模块
         analyst.add_strategy("pydt_IF", folder="./outputs_bt/pydt_IF/", init_capital=500000, rf=0.02, annual_trading_days=240)
         #运行绩效模块
         analyst.run()
-
+    
         kw = input('press any key to exit\n')
         engine.release_backtest()
     ```
+    
 * 然后启动runBT.py进行回测，回测的执行如下
+    
     ![alt 回测示例图](http://wt.f-sailors.cn/snapshots/bt_fut_snapshot.jpg)
-
+    
 * 回测完成以后，打开生成的绩效分析报表(xxxx.xlsx)，则可以查看策略的回测绩效
     回测绩效概览
     ![alt 回测绩效概览](http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary.png)
     回测收益详情
+    
     ![alt 回测绩效详情](http://wt.f-sailors.cn/snapshots/ana_fut_snapshot.jpg)
     从上图的绩效分析可以看出，DualThrust策略，针对股指期货主力合约，在20190919到20191201这段时间内，这组参数下进行回测，一直处于回撤的状态，累计亏损达20%。可见，这不是一组好的参数。
-
+    
 * 接下来我们调整参数，将K1和K2改成0.5和0.3，再进行回测和分析，得到如下结果
     调整后的回测绩效总览
     ![alt 回测绩效概览](http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary2.png)
-    从上图可以看出，参数调整过以后的绩效远远好于调整之前。
-
+    
+* 从上图可以看出，参数调整过以后的绩效远远好于调整之前。
+    
 * 最后进行回测分析总结
     让我们简单的分析一下参数调整前和参数调整后绩效悬殊的原因。
     熟悉DualThrust的朋友肯定知道：DualThrus的信号原理其实就是价格突破。当上边界系数k1和下边界系数k2较小的时候，信号出现较多，但是容易遇到假突破，从而导致交易成本上升，最终出现净亏损；当k1和k2较大的时候，信号变少，但是又容易错失交易机会。
     调整之前的k1和k2较小，调整以后的k1和k2也不是特别大，从而达到了过滤大部分假突破，降低交易成本，并保证一定的灵敏度的效果，所以才会有较大幅度的改善。
     大家有兴趣的话，可以自行尝试一下，将k1和k2改成不同的组合，相信能够有更好的回测结果。
-    

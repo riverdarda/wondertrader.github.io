@@ -21,7 +21,9 @@
 
 #### 1、使用`vmware`安装`ubuntu server 18.04.3 LTS`镜像
 镜像可以从**共享资源**中直接下载
+
 ![image.png](http://wt.f-sailors.cn/devenv/2.png)
+
 ![image.png](http://wt.f-sailors.cn/devenv/3.png)
 
 #### 2、虚拟机创建成功以后，自动开启，进入安装界面，然后一路默认
@@ -29,8 +31,11 @@
 
 #### 3、到了源配置界面，一定要把镜像改为国内镜像！
 这个很重要！不然安装特别慢！
+
 ![image.png](http://wt.f-sailors.cn/devenv/5.png)
-**推荐使用阿里云的源http://mirrors.aliyun.com/ubuntu**
+
+**推荐使用阿里云的源http://mirrors.aliyun.com/ubuntu**	
+
 ![image.png](http://wt.f-sailors.cn/devenv/6.png)
 
 #### 4、到了SSH配置界面，一定要选择`SSH server`，不然会无法使用`putty`或`SecureCRT`
@@ -41,10 +46,12 @@
 
 #### 6、进入最后流程
 这里会有安全升级，可能耗时较长（如果前面没有配置国内镜像，这里的时间更是数倍）,也可以跳过安全升级
+
 ![image.png](http://wt.f-sailors.cn/devenv/9.png)
 
 #### 7、重启之后，进入控制台
 如果使用`SecureCRT`连接，在`vmware`中可以看一下虚拟机的ip地址，然后配置连接地址和账号密码进行连接
+
 ![image.png](http://wt.f-sailors.cn/devenv/10.png)
 
 #### 8、安装开发环境
@@ -54,12 +61,15 @@ $ sudo apt-get install build-essential
 ![image.png](http://wt.f-sailors.cn/devenv/11.png) 
 
 使用`gcc --version`查看`gcc`的版本号
+
 ![image.png](http://wt.f-sailors.cn/devenv/12.png)
 
 安装`cmake`
+
 ![image.png](http://wt.f-sailors.cn/devenv/13.png)
 
 使用`cmake --version`查看`cmake`的版本号
+
 ![image.png](http://wt.f-sailors.cn/devenv/14.png)
 
 安装7z解压工具
@@ -70,6 +80,7 @@ $ sudo apt-get install p7zip-full
 
 #### 9、从`共享资源`中下载`mydes_linux.7z`并上传到虚拟机
 可以使用使用`SecureFX`（**共享资源**中的`SecureCRT`自带`SecureFX`）上传到虚拟机，如下图：
+
 ![image.png](http://wt.f-sailors.cn/devenv/16.png)
 
 #### 10、将`mydeps_linux.7z`解压到`/home`下
@@ -88,6 +99,7 @@ $ sudo git clone https://github.com/wondertrader/wondertrader.git
 $ sudo ./build_release.sh
 ```
 编译完成以后，使用`SecureFX`就可以直接从`src`目录下的`build/bin`中下载需要的文件即可
+
 ![image.png](http://wt.f-sailors.cn/devenv/18.png)
 
 
@@ -95,7 +107,9 @@ $ sudo ./build_release.sh
 #### 1、安装`vs2017`社区版
 首先下载`vs2017`的安装器，下载地址如下：
 [https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/](https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/)
+
 ![image.png](http://wt.f-sailors.cn/devenv/19.png)
+
 ![image.png](http://wt.f-sailors.cn/devenv/20.png)
 
 或者直接从**共享资源**中直接下载该安装器
@@ -107,25 +121,36 @@ $ sudo ./build_release.sh
 
 从**共享资源**中下载环境变量编辑器`RapidEE`到本地，解压以后运行。
 新建一个名为`MyDepends141`的环境变量，并将值设置为依赖库解压目录`E:/vc141depends`
+
 ![image.png](http://wt.f-sailors.cn/devenv/22.png)
+
 设置好了以后，保存环境变量，即可生效，如果没有生效，可以重启电脑。`win10`下要注意一下使用**管理员身份运行**`RapidEE`，不然保存可能会失败！
 
 #### 4、安装`git`
 
 下载git并安装：[https://git-scm.com/download/win](https://git-scm.com/download/win)
+
 ![image.png](http://wt.f-sailors.cn/devenv/23.png)
+
 下载tortoisegit并安装：[https://tortoisegit.org/download/](https://tortoisegit.org/download/)
+
 ![image.png](http://wt.f-sailors.cn/devenv/24.png)
 
 #### 5、下载代码
 选择一个目录，然后右键点击该目录，选择“**Git克隆**”菜单
+
 ![image.png](http://wt.f-sailors.cn/devenv/25.png)
 URL设置为:<https://github.com/wondertrader/wondertrader.git>
+
 ![image.png](http://wt.f-sailors.cn/devenv/26.png)
 
 #### 6、编译代码
 进入到`wondertrader`的`src`目录下
+
 ![image.png](http://wt.f-sailors.cn/devenv/27.png)
+
 双击运行`wondertrader.sln`，打开以后在解决方案上右键点击，选择“**生成解决方案**”就进入了编译过程
+
 ![image.png](http://wt.f-sailors.cn/devenv/28.png)
+
 ![image.png](http://wt.f-sailors.cn/devenv/29.png)
