@@ -19,6 +19,8 @@
   * [CTA网格交易策略demo](gridstra.md)
   * [常见日内CTA策略demo](ctadaytradestra.md)
   * [常见跨日CTA策略demo](ctacrossdaystra.md)
+* 其他资料
+  * [延迟优化日记](latency.md)
 
 ---
 
