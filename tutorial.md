@@ -1,7 +1,6 @@
-安装wtpy
-
+###安装wtpy
 ---
-* 安装python3.6以上的版本（32位、64位），安装完成以后输入以下命令，可以检查python的版本号
+* 安装python3.8以上的版本（32位、64位），安装完成以后输入以下命令，可以检查python的版本号
     ``` shell
     $ python
     ```
@@ -35,46 +34,44 @@
 
 ### 修改demo的配置
 ---
-* 打开回测配置文件configbt.json
-    ```json
-    {
-        "replayer":{
-            "mode":"csv",           //数据类型，csv或者bin
-            "path":"./storage/",    //数据存储路径
-            "stime":201909010900,   //回测开始时间，分钟线yyyyMMddhhmm，日线yyyyMMdd
-            "etime":201912011500,   //回测结束时间，格式同开始时间
-            "basefiles":{
-                "session":"./common/sessions.json",     //交易时间模板
-                "commodity":"./common/commodities.json",//品种列表
-                "contract":"./common/contracts.json",   //合约列表
-                "holiday":"./common/holidays.json",     //节假日
-                "hot":"./common/hots.json"              //期货主力切换规则
-            },
-            "fees":"fees.json"  //佣金模板
-        },
-        "env":{
-            "mocker":"cta"      //回测撮合，CTA模式
-        }
-    }
+* 打开回测配置文件configbt.yaml
+    ```yaml
+    replayer:
+        basefiles:
+            commodity: ../common/commodities.json   #品种列表
+            contract: ../common/contracts.json      #合约列表
+            holiday: ../common/holidays.json        #节假日列表
+            hot: ../common/hots.json                #主力合约映射表
+            session: ../common/sessions.json        #交易时间模板
+            uft-8: true        #基础文件是否是UFT8编码，这个一定要和文件编码统一！！！
+        mode: csv   #回测历史数据存储，csv或者bin/wtp，其中bin/wtp都是一个意思
+        store:
+            module: WtDataStorage   #历史数据存储模块，如果是csv，该配置不生效
+            path: ../storage/       #历史数据存储跟目录
+        etime: 201912011500         #回测结束时间，精确到分钟
+        stime: 201909010900         #回测开始时间，精确到分钟
+        fees: ../common/fees.json   #佣金配置文件
+    env:
+        mocker: cta                 #回测引擎，cta/sel/hft/exec/uft
     ```
 
 ### 回测及结果分析
 ---
 * 打开回测入口文件runBT.py，配置好回测引擎，加入要测试的策略，以及设置好绩效分析的参数
     ```python
-    from wtpy import WtBtEngine
-    from wtpy.backtest import WtBtAnalyst
-    
+    from wtpy import WtBtEngine,EngineType
+    from wtpy.apps import WtBtAnalyst
+
     from Strategies.DualThrust import StraDualThrust
-    
+
     if __name__ == "__main__":
         #创建一个运行环境，并加入策略
-        engine = WtBtEngine()
-        engine.init('.\\Common\\', "configbt.json")
+        engine = WtBtEngine(EngineType.ET_CTA)
+        engine.init('../common/', "configbt.yaml")
         engine.configBacktest(201909100930,201912011500)
-        engine.configBTStorage(mode="csv", path=".\\storage\\")
-        engine.commitBTConfig() #代码里的配置项，会覆盖配置文件configbt.json里的配置项
-    
+        engine.configBTStorage(mode="csv", path="../storage/")
+        engine.commitBTConfig()
+
         '''
         创建DualThrust策略的一个实例
         name    策略实例名称
@@ -87,42 +84,42 @@
         isForStk    DualThrust策略用于控制交易品种的代码
         '''
         straInfo = StraDualThrust(name='pydt_IF', code="CFFEX.IF.HOT", barCnt=50, period="m5", days=30, k1=0.1, k2=0.1, isForStk=False)
-        engine.set_strategy(straInfo)
-    
+        engine.set_cta_strategy(straInfo)
+
         #开始运行回测
-        engine.run_backtest()
-    
+        engine.run_backtest(bAsync=False)
+
         #创建绩效分析模块
         analyst = WtBtAnalyst()
         #将回测的输出数据目录传递给绩效分析模块
         analyst.add_strategy("pydt_IF", folder="./outputs_bt/pydt_IF/", init_capital=500000, rf=0.02, annual_trading_days=240)
         #运行绩效模块
-        analyst.run()
-    
+        analyst.run_new()
+
         kw = input('press any key to exit\n')
         engine.release_backtest()
     ```
     
 * 然后启动runBT.py进行回测，回测的执行如下
   
-* ![alt 回测示例图](http://wt.f-sailors.cn/snapshots/bt_fut_snapshot.jpg)
+* ![alt 回测示例图](./images/bt_fut_snapshot.jpg)
   
 * 回测完成以后，打开生成的绩效分析报表(xxxx.xlsx)，则可以查看策略的回测绩效
     
 * 回测绩效概览
     
-* ![alt 回测绩效概览](http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary.png)
+* ![alt 回测绩效概览](./images/bt_fut_pnl_summary.png)
     
 * 回测收益详情
     
-* ![alt 回测绩效详情](http://wt.f-sailors.cn/snapshots/ana_fut_snapshot.jpg)
+* ![alt 回测绩效详情](./images/ana_fut_snapshot.jpg)
     从上图的绩效分析可以看出，DualThrust策略，针对股指期货主力合约，在20190919到20191201这段时间内，这组参数下进行回测，一直处于回撤的状态，累计亏损达20%。可见，这不是一组好的参数。
     
 * 接下来我们调整参数，将K1和K2改成0.5和0.3，再进行回测和分析，得到如下结果
     
 * 调整后的回测绩效总览
     
-* ![alt 回测绩效概览](http://wt.f-sailors.cn/snapshots/bt_fut_pnl_summary2.png)
+* ![alt 回测绩效概览](./images/bt_fut_pnl_summary2.png)
     
 * 从上图可以看出，参数调整过以后的绩效远远好于调整之前。
   
