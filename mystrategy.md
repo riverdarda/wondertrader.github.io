@@ -166,30 +166,27 @@
 
 * 修改runBT.py，设置好RBreaker策略的参数
     ```python
-    from wtpy import WtBtEngine
-    from wtpy.backtest import WtBtAnalyst
-    
-    # from Strategies.DualThrust import StraDualThrust
-    from Strategies.RBreaker import StraRBreaker
-    
+    from wtpy import WtBtEngine,EngineType
+    from wtpy.apps import WtBtAnalyst
+
+    from Strategies.DualThrust import StraDualThrust
+
     if __name__ == "__main__":
         #创建一个运行环境，并加入策略
-        engine = WtBtEngine()
-        engine.init('.\\Common\\', "configbt.json")
+        engine = WtBtEngine(EngineType.ET_CTA)
+        engine.init('../common/', "configbt.yaml")
         engine.configBacktest(201909100930,201912011500)
-        engine.configBTStorage(mode="csv", path=".\\storage\\")
+        engine.configBTStorage(mode="csv", path="../storage/")
         engine.commitBTConfig()
     
-        # straInfo = StraDualThrust(name='pydt_IF', code="CFFEX.IF.HOT", barCnt=50, period="m5", days=30, k1=0.5, k2=0.3, isForStk=False)
         straInfo = StraRBreaker(name='pyrb_IF', code="CFFEX.IF.HOT", barCnt=50, period="m5", N=30, a=0.35, b=1.07, c = 0.07, d=0.25, cleartimes=[[1455,1515]])
-        engine.set_strategy(straInfo)
+        engine.set_cta_strategy(straInfo)
     
         engine.run_backtest()
     
         analyst = WtBtAnalyst()
-        # analyst.add_strategy("pydt_IF", folder="./outputs_bt/pydt_IF/", init_capital=500000, rf=0.02, annual_trading_days=240)
         analyst.add_strategy("pyrb_IF", folder="./outputs_bt/pyrb_IF/", init_capital=500000, rf=0.02, annual_trading_days=240)
-        analyst.run()
+        analyst.run_new()
     
         kw = input('press any key to exit\n')
         engine.release_backtest()
@@ -197,10 +194,10 @@
 
 * 双击运行runBT.py执行回测
     
-    ![alt 回测执行截图](http://wt.f-sailors.cn/snapshots/bt_rbreaker_fut.png)
+    ![alt 回测执行截图](./images/bt_rbreaker_fut.png)
     
 * 查看绩效分析
     
-    ![alt 回测执行截图](http://wt.f-sailors.cn/snapshots/bt_rbreaker_pnl_summary.png)
+    ![alt 回测执行截图](./images/bt_rbreaker_pnl_summary.png)
     
 * 根据回测结果，重新调整参数，继续回测……

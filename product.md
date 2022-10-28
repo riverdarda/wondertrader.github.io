@@ -5,7 +5,7 @@
 
 ### 安装wtpy
 ---
-* 安装python3.6以上的版本（32位、64位），安装完成以后输入以下命令，可以检查python的版本号
+* 安装python3.8以上的版本（32位、64位），安装完成以后输入以下命令，可以检查python的版本号
     ``` shell
     $ python
     ```
@@ -28,47 +28,42 @@
 * 复制股票数据组件demo<https://github.com/wondertrader/wtpy/tree/master/demos/datakit_stk>
 
 * 打开配置文件`dtcfg.json`，配置XTP仿真行情通道
-    ```json
-    "parsers":[
-        {
-            "active":true,
-            "module":"ParserXTP.dll",
-            "host":"120.27.164.138",    //XTP仿真行情通道地址
-            "port":"6002",
-            "user":"********",  //XTP仿真账号
-            "pass":"********",  //XTP仿真密码
-            "protocol":1,       //XTP通道参数，可以忽略
-            "clientid":1,       //XTP通道参数，可以忽略
-            "hbinterval":15,    //XTP通道参数，可以忽略
-            "buffsize":128,     //XTP通道参数，可以忽略
-            "code":"SSE.000001,SSE.600009,SSE.600036,SSE.600276,SZSE.000001"
-        }
-    ]
+    ```yaml
+    parsers:
+    -   active: true
+        id: parser
+        module: ParserXTP
+        host: 120.27.164.138
+        port: '6002'
+        protocol: 1
+        buffsize: 128
+        clientid: 1    
+        hbinterval: 15    
+        user: 你的XTP仿真账号
+        pass: 你的XTP仿真密码
+        code: SSE.000001,SSE.600009,SSE.600036,SSE.600276,SZSE.000001
+
     ```
 
 * 打开配置文件`dtcfg.json`，配置数据落地目录
-    ```json
-     "writer":{
-        "path":"./STK_Data",    //数据落地目录
-        "savelog":false,        //是否将tick同时输出csv文件
-        "async":false,          //异步开关，如果股票个数比较多，建议开启
-        "groupsize":20          //数据落地分组大小，用于控制日志显示
-    }
+    ```yaml
+    writer:
+        module: WtDtStorage #数据存储模块
+        async: true         #同步落地还是异步落地，期货推荐同步，股票推荐异步
+        groupsize: 20       #日志分组大小，主要用于控制日志输出，当订阅合约较多时，推荐1000以上，当订阅的合约数较少时，推荐100以内
+        path: ../STK_Data   #数据存储的路径
+        savelog: false      #是否保存tick到csv
     ```
 
-* 打开配置文件`dtcfg.json`，配置广播端口
-    ```json
-    "broadcaster":{
-        "active":true,  //是否开启广播
-        "bport":3997,   //订阅端口
-        "broadcast":[
-            {
-                "host":"255.255.255.255",   //广播地址
-                "port":9001,                //广播端口
-                "type":2                    //数据格式，固定为2
-            }
-        ]
-    }
+* 然后配置广播端口
+    ```yaml
+    broadcaster:                    # UDP广播器配置项
+        active: true
+        bport: 3997                 # UDP查询端口，主要是用于查询最新的快照
+        broadcast:                  # 广播配置
+        -   host: 255.255.255.255   # 广播地址，255.255.255.255会向整个局域网广播，但是受限于路由器
+            port: 9001              # 广播端口，接收端口要和广播端口一致
+            type: 2                 # 数据类型，固定为2
     ```
 
 * 完成上述工作以后，就可以执行`runDT.py`启动数据组件了
@@ -77,95 +72,61 @@
 ---
 * 复制股票实盘demo<https://github.com/wondertrader/wtpy/tree/master/demos/cta_stk>
 
-* 打开配置文件`config.json`，修改环境配置
-    ```json
-    "env":{
-        "name":"cta",
-        "mode": "product",
-        "product":{
-            "session":"SD0930"
-        },
-        "filters":"filters.json",   //人工干预配置文件，暂时忽略
-        "fees":"fees_stk.json",     //佣金模板文件
-    }
+* 打开配置文件`config.yaml`，修改环境配置
+    ```yaml
+    env:
+        name: cta                       #引擎名称：cta/hft/sel
+        fees: ../common/fees_stk.json   #佣金配置文件
+        filters: filters.yaml           #过滤器配置文件，这个主要是用于盘中不停机干预的
+        product:
+            session: TRADING            #驱动交易时间模板，TRADING是一个覆盖国内全部交易品种的最大的交易时间模板，从夜盘21点到凌晨1点，再到第二天15:15，详见sessions.json
     ```
 
-* 打开配置文件`config.json`，修改数据读取路径
-    ```json
-    "data":{
-        "store":{
-            "path":"./STK_Data/"    //这里修改为之前数据组件落地的路径，注意区分相对路径和绝对路径
-        }
-    }
+* 修改数据读取路径，确认和datakit设置的存储路径一致
+    ```yaml
+    data:
+        store:
+            module: WtDtStorage
+            path: ../STK_Data/
     ```
 
-* 打开配置文件`config.json`，修改XTP交易通道配置
-    ```json
-    "traders":[
-        {
-            "active":true,
-            "id":"simnow",              //交易通道ID
-            "module":"TraderXTP.dll",   
-            "host":"120.27.164.69",     //XTP仿真交易地址
-            "port":"6001",
-            "user":"********",          //XTP仿真账号
-            "pass":"********",
-            "acckey":"********",        //XTP认证key
-			"protocol":1,
-			"clientid":1,
-			"hbinterval":15,
-			"buffsize":128,
-            "quick":true,
-        }
-    ]
+* 打开配置文件`tdtraders.yaml`，修改XTP交易通道配置
+    ```yaml
+    traders:
+    -   active: true
+        client: 1
+        host: 120.27.164.69
+        id: simnow
+        module: TraderXTP
+        user: 你的XTP仿真账号,
+        pass: 你的XTP仿真密码,
+        acckey: 你的XTP仿真key,
+        port: 6001
+        quick: true
+        riskmon:
+            active: true
+            policy:
+                default:
+                    cancel_stat_timespan: 10
+                    cancel_times_boundary: 20
+                    cancel_total_limits: 470
+                    order_stat_timespan: 10
+                    order_times_boundary: 20
     ```
 
-* 打开配置文件`config.json`，修改行情通道配置
-    ```json
-    "parsers":[
-        {
-            "active":true,
-            "id":"parser1",
-            "module":"ParserUDP.dll",
-            "host":"127.0.0.1",
-            "bport":9001,               //数据组件广播端口
-            "sport":3997,               //数据组件查询端口
-            "filter":""
-        }
-    ]
+* 打开配置文件`tdparsers.yaml`，修改行情通道配置
+    ```yaml
+    parsers:
+    -   active: true
+        id: parser1
+        module: ParserUDP
+        host: 127.0.0.1
+        bport: 9001       # 广播端口
+        sport: 3997       # 查询端口
+        filter: ''
     ```
 
 * 至此，`config.json`里面需要用户修改的修改项基本就修改完成了，其他的配置项保持即可。
-
-### 准备数据
----
-假设我们需要使用上证指数(SSE.000001)、浦发银行(SSE.600000)、深证成指(SZSE.399001)、平安银行(SZSE.000001)等4个品种的5分钟数据和日线数据。
-
-* 从Multicharts导出SSE.000001和SZSE.399001两个指数的历史日线数据和历史5分钟线数据（截止到最近一个交易日）到csv文件
-
-* 从Multicharts导出SSE.000001和SZSE.399001两个指数的历史日线前复权数据和历史5分钟线前复权数据（截止到最近一个交易日）到csv文件。个股要考虑数据的连续性，所以要使用前复权数据。
-
-* 将sv文件按照数据周期不同放到不同的文件夹下面，然后利用回测引擎，将csv数据转换成wt平台的数据格式
-    ```python
-    from wtpy import WtBtEngine
-
-    if __name__ == "__main__":
-        #创建一个运行环境，并加入策略
-        env = WtBtEngine()
-        
-        env.trans_mc_bars(".\\csv_m5\\",".\\bin_m5\\", "m5")
-        env.trans_mc_bars(".\\csv_d\\",".\\bin_d\\", "d")
-
-        kw = input('press any key to exit\n')
-    ```
-
-* 将生成的数据文件(`*.dsb`)重命名后，复制到数据组件存储路径对应的目录下，如：
-    * 从MC导出的历史数据文件名为`SH600009Q_m5.csv`
-    * 转成wt内部数据格式以后为`SH600009Q_m5.dsb`
-    * 将dsb文件名改成`600009Q.dsb`
-    * 然后将`600009Q.dsb`复制到`./STK_Data/his/min5/SSE/`下面
-
-* 历史数据准备完成以后，对于个股数据来说，wt会自动将历史复权数据和最新的实时数据拼接起来，从而形成一份完整连续的个股复权数据。
 
 ### 修改策略
 ---
@@ -229,19 +190,16 @@
 ---
 * 检查run.py是否正确配置
     ```python
-    from wtpy import WtEngine
+    from wtpy import WtEngine,EngineType
     from Strategies.DualThrust import StraDualThrust
 
     if __name__ == "__main__":
         #创建一个运行环境，并加入策略
-        engine = WtEngine()
-        engine.init('.\\Common\\', "config.json")
+        engine = WtEngine(EngineType.ET_CTA)
+        engine.init('../common/', "config.yaml", commfile="stk_comms.json", contractfile="stocks.json")
         
-        straInfo = StraDualThrust(name='pydt_SH600000', code="SSE.600000", barCnt=50, period="m5", days=30, k1=0.1, k2=0.1, isForStk=True)
-        engine.add_strategy(straInfo)
-
-        straInfo = StraDualThrust(name='pydt_SZ000001', code="SZSE.000001", barCnt=50, period="m5", days=30, k1=0.1, k2=0.1, isForStk=True)
-        engine.add_strategy(straInfo)
+        straInfo = StraDualThrust(name='pydt_SH600000', code="SSE.600000", barCnt=50, period="d1", days=30, k1=0.1, k2=0.1, isForStk=True)
+        engine.add_cta_strategy(straInfo)
         
         engine.run()
 
