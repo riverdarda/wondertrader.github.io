@@ -2,20 +2,21 @@
 
 #### 1.随机50交易法介绍
 
-	沪深300指数的成分股每年调整2次（每半年调整一次），一般是1月份和7月份进行调整，每次调整比例不超过10%。每日随机选取50只沪深300的成分股股票作为股票池等权重买入，在第二日重新随机选取50只沪深300成分股股票作为新的股票池。卖出不在新股票池内的股票，买入新股票池中的股票，若新股票池当中的股票已经买入则继续持有，保证每日固定持有50只股票。重复该过程。
+&emsp;&emsp;沪深300指数的成分股每年调整2次（每半年调整一次），一般是1月份和7月份进行调整，每次调整比例不超过10%。每日随机选取50只沪深300的成分股股票作为股票池等权重买入，在第二日重新随机选取50只沪深300成分股股票作为新的股票池。卖出不在新股票池内的股票，买入新股票池中的股票，若新股票池当中的股票已经买入则继续持有，保证每日固定持有50只股票。重复该过程。
 
 #### 2.策略实现
 
 - 参数说明
 
 ```python
-		self.__capital__ = capital # 起始资金
-		self.__period__ = period # 交易k线的时间级，如5分钟，1天
-		self.__bar_cnt__ = barCnt # 拉取的bar的次数
-		self.__codes__ = codes # 所有沪深300成分股股票代码
-		self.__codes2__ = [] #每日50股票池
+self.__capital__ = capital # 起始资金
+self.__period__ = period # 交易k线的时间级，如5分钟，1天
+self.__bar_cnt__ = barCnt # 拉取的bar的次数
+self.__codes__ = codes # 所有沪深300成分股股票代码
+self.__codes2__ = [] #每日50股票池
 ```
-	若新股票池的股票已经买入，则继续持有，并对股票池进行更新。
+&emsp;&emsp;若新股票池的股票已经买入，则继续持有，并对股票池进行更新。
+
 - 策略框架介绍
 
 ```python
@@ -128,7 +129,7 @@ class StraHushenStk(BaseCtaStrategy):
 
 ```
 
-写好了策略主体，将策略主体代码命名为Hushen300.py放入wtpy/demos/cta_stk_bt/strategies目录下，然后我们还需要runBT.py来让策略跑起来，runBT.py的格式和代码如下：
+&emsp;&emsp;写好了策略主体，将策略主体代码命名为Hushen300.py放入wtpy/demos/cta_stk_bt/strategies目录下，然后我们还需要runBT.py来让策略跑起来，runBT.py的格式和代码如下：
 
 ```python
 from wtpy import WtBtEngine,EngineType
@@ -161,14 +162,14 @@ if __name__ == "__main__":
     engine.release_backtest()
 ```
 
-将runBT.py放入wtpy/demos/cta_stk_bt运行即可，其中的参数可以自行修改替换。这次是使用的沪深300成分股数据来进行回测，回测需要的日线数据可以通过下面的链接获取，然后放入wtpy/demos/storage/hushen300/csv文件夹中。
+&emsp;&emsp;将runBT.py放入wtpy/demos/cta_stk_bt运行即可，其中的参数可以自行修改替换。这次是使用的沪深300成分股数据来进行回测，回测需要的日线数据可以通过下面的链接获取，然后放入wtpy/demos/storage/hushen300/csv文件夹中。
 
 https://pan.baidu.com/s/12WJd3tMRBdOgsDXiiBA_sg?pwd=wtpy 
 
 
 #### 3.回测结果
 
-	打开运行之后生成的xlsx文件，可以看到策略的绩效，如下图所示：
+&emsp;&emsp;打开运行之后生成的xlsx文件，可以看到策略的绩效，如下图所示：
 
 - 回测绩效
 
